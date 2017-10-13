@@ -1,0 +1,44 @@
+<style>
+  .view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 15px 0px;
+    background-color: bisque;
+  }
+
+</style>
+
+<template>
+  <view>
+    <view class="view">
+      <text>标题</text>
+      <text>................................
+        ....................................
+        ..................
+      </text>
+      <text>2017-10-13-20:34:38</text>
+    </view>
+    <view class="view">
+      <text>标题</text>
+      <text>................................
+        ....................................
+        ..................
+      </text>
+      <text>2017-10-13-20:34:38</text>
+    </view>
+  </view>
+  
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Ceshi extends wepy.page {
+    data = {
+    }
+
+    methods = {
+    }
+  }
+</script>

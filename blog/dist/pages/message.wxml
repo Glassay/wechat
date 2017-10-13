@@ -1,0 +1,6 @@
+
+  <view class="layout back_image" style="opacity: 1">
+    <view>
+      <text class="article" style="opacty: 0.5">留言板</text>
+    </view>
+  </view>

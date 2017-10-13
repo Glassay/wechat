@@ -1,0 +1,98 @@
+<style lang="less">
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+</style>
+
+<script>
+import wepy from 'wepy'
+import 'wepy-async-function'
+
+export default class extends wepy.app {
+  config = {
+    pages: [
+      // 'pages/ceshi',
+      'pages/home',
+      'pages/index',
+      'pages/message',
+      'pages/collection'
+    ],
+    window: {
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#000000',
+      navigationBarTitleText: 'Cheng的BLOG',
+      navigationBarTextStyle: 'white'
+    },
+    tabBar: {
+      color: '#DDDDDD',
+      selectedColor: '#666666',
+      backgroundColor: '#000000',
+      list: [{
+        pagePath: 'pages/home',
+        text: '首页',
+        iconPath: './image/home.png',
+        selectedIconPath: './image/home1.png'
+      }, {
+        pagePath: 'pages/message',
+        text: '留言板',
+        iconPath: './image/message.png',
+        selectedIconPath: './image/message1.png'
+      }, {
+        pagePath: 'pages/collection',
+        text: '收藏',
+        iconPath: './image/like.png',
+        selectedIconPath: './image/like1.png'
+      }, {
+        pagePath: 'pages/',
+        text: 'Github',
+        iconPath: './image/github.png',
+        selectedIconPath: './image/github1.png'
+      }]
+    }
+  }
+
+  globalData = {
+    userInfo: null
+  }
+
+  constructor () {
+    super()
+    this.use('requestfix')
+  }
+
+  onLaunch() {
+    this.testAsync()
+  }
+
+  sleep (s) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('promise resolved')
+      }, s * 1000)
+    })
+  }
+
+  async testAsync () {
+    const data = await this.sleep(3)
+    console.log(data)
+  }
+
+  getUserInfo(cb) {
+    const that = this
+    if (this.globalData.userInfo) {
+      return this.globalData.userInfo
+    }
+    wepy.getUserInfo({
+      success (res) {
+        that.globalData.userInfo = res.userInfo
+        cb && cb(res.userInfo)
+      }
+    })
+  }
+}
+</script>

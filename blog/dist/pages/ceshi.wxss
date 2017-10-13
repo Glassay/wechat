@@ -1,0 +1,10 @@
+
+  .view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 15px 0px;
+    background-color: bisque;
+  }
+

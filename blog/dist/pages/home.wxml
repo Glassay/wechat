@@ -1,0 +1,19 @@
+
+  <view class="layout back_image" style="opacity: 1">
+    <view class="search1">
+      <view class="search1">
+        <input class="search2" placeholder="请输入搜索内容" auto-focus/>
+      </view>
+      <view class="search1">
+        <button size="mini">搜索</button>
+      </view>
+    </view>
+    <view class="view">
+      <text>--题目</text>
+      <text>.................
+        .....................
+        .....................
+        .....................</text>
+      <text>2017-10-13</text>
+    </view>
+  </view>
