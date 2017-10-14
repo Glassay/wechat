@@ -1,61 +1,30 @@
 
-  .layout {
+  .head {
     display: flex;
     flex-direction: column;
-  }
-  .back_image {
-    /* display: flex; */
-    background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/20160812/1470965331824426_390x690.jpg");
-    background-attachment: fixed;
-    background-size: auto;
-    /* background-color:blanchedalmond; */
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-  }
-  .article {
-    height: 180px;
-    width: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: white;
-    margin-top: 30px;
-  }
-  .last {
-    position: absolute;
-    bottom: 0;
-    background-color: #000000;
-    color: #AAAAAA;
-    font-size: 10px;
-    height: 50px;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .last_layout {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-  } 
-  .image_layout {
-    width: 25px;
-    height: 25px;
+    font-size: 15px;
+    background-color: #000000;
+    height: 40px;
+    width: 100%;
   }
-  .last_layout1 {
+  .title {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: space-between;
+    align-items: center;
+    margin-top: 10px;
   }
-  .choose1 {
-    margin: 0px 0px 0px 20px;
+  .line {
+    background-color: #AAAA;
+    height: 1px;
+    width: 90%;
   }
-  .choose2 {
-    margin: 0px 20px 0px 0px;
+  .b_image {
+    background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/2015/0210/20150210054133399_ios.jpg");
+    background-size: auto;
+    position: fixed;
+    height: 100%;
+    width: 100%;
   }
 

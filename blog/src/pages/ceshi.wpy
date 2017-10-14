@@ -1,44 +1,49 @@
 <style>
-  .view {
+  /* .view {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 15px 0px 15px 0px;
     background-color: bisque;
-  }
+  } */
 
 </style>
 
 <template>
-  <view>
-    <view class="view">
-      <text>标题</text>
-      <text>................................
-        ....................................
-        ..................
-      </text>
-      <text>2017-10-13-20:34:38</text>
-    </view>
-    <view class="view">
-      <text>标题</text>
-      <text>................................
-        ....................................
-        ..................
-      </text>
-      <text>2017-10-13-20:34:38</text>
-    </view>
+  <view class="container">
+    <text>{{weather.city.text}} : {{weather.city.data}}</text>
+    <text>{{weather.weather.text}} : {{weather.weather.data}}</text>
+    <text>{{weather.temperature.text}} : {{weather.temperature.data}} ℃</text>
+    <text>风速 : {{weather.winddirection.data}} {{weather.windpower.data}}</text>
+    <text>{{weather.humidity.text}} : {{weather.humidity.data}}</text>
   </view>
-  
 </template>
 
 <script>
   import wepy from 'wepy'
+  var amapFile = require('../libs/amap-wx.js')
+
   export default class Ceshi extends wepy.page {
     data = {
+      weather: {}
     }
 
     methods = {
+    }
+    onLoad() {
+      let that = this
+      let myAmapFun = new amapFile.AMapWX({key: 'ca81d5c32578c8bc0c54b46f26ae8403'})
+      myAmapFun.getWeather({
+        success: function (data) {
+          that.setData({
+            weather: data
+          })
+        },
+        fail: function(info) {
+          console.log(info)
+        }
+      })
     }
   }
 </script>
