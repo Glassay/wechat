@@ -1,0 +1,18 @@
+<style>
+</style>
+
+<template>
+  <view>
+    <text>请保存图片来扫描下面的二维码用来访问我的Github</text>
+    <image src="{{pic}}"></image>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Personal extends wepy.page {
+    data = {
+      pic: '../image/gitewm.png'
+    }
+  }
+</script>

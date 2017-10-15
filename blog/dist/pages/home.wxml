@@ -1,12 +1,20 @@
 
   <view>
-    <view class="back_image2">
-      <view class="weather">
-        <text>{{weather.city.text}} : {{weather.city.data}}</text>
-        <text>{{weather.weather.text}} : {{weather.weather.data}}</text>
-        <text>{{weather.temperature.text}} : {{weather.temperature.data}} ℃</text>
-        <text>风速 : {{weather.winddirection.data}} {{weather.windpower.data}}</text>
-        <text>{{weather.humidity.text}} : {{weather.humidity.data}}</text>
+    <view class="back_image1">
+      <view class="fir_view">
+        <view class="weather">
+          <text>{{weather.city.text}} : {{weather.city.data}}</text>
+          <text>{{weather.weather.text}} : {{weather.weather.data}}</text>
+          <text>{{weather.temperature.text}} : {{weather.temperature.data}} ℃</text>
+          <!-- <text>风速 : {{weather.winddirection.data}} {{weather.windpower.data}}</text>
+              <text>{{weather.humidity.text}} : {{weather.humidity.data}}</text> -->
+        </view>
+      </view>
+      <view class="welcome">
+        <view>
+          <image class="avatar" src="{{avatarUrl}}"/>
+          <text style="color: #DDDDDD; font-size: 15px;">{{nickName}}</text>
+        </view>
       </view>
       <view class="search">
         <view class="search1">
@@ -16,58 +24,120 @@
           <button size="mini" style="background-color: #FFFFFF">搜索</button>
         </view>
       </view>
-    <!-- </view>
-    <view class="back_image2"> -->
       <view>
-        <text>.
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
-          .
+        <view>
+          <text>最近更新</text>
+          <text class="line"/>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view>
+        <text>第一篇 .
+           .
+            .
+             .
+              .
+        </text>
+      </view>
+      <view>
+        <text class="line"/>
+        <text>第二篇 .
+           .
+            .
+             .
+              .
+        </text>
+      </view>
+      <view>
+        <text class="line"/>
+        <text>第三篇 . 
+          . 
+          . 
+          . 
           .
         </text>
       </view>
+      <view>
+        <text class="line"/>
+        <text>第四篇 . 
+          .
+           .
+            .
+             .
+        </text>
+      </view>
+      <view>
+        <text class="line"/>
+        <text>第五篇 .
+           .
+            .
+             .
+              .
+        </text>
+      </view>
+      <view>
+        <text class="line"/>
+        <text>第五篇 .
+           .
+            .
+             .
+              .
+        </text>
+      </view>
+      <view>
+        <text class="line"/>
+        <text>第五篇 .
+           .
+            .
+             .
+              .
+        </text>
+      </view>
+      <view>
+        <text class="line"/>
+        <text>第五篇 .
+           .
+            .
+             .
+              .
+        </text>
+      </view>
+      <view>
+        <text class="line"/>
+        <text>第五篇 .
+           .
+            .
+             .
+              .
+        </text>
+      </view>
+      <view>
+        <text class="line"/>
+        <text>第五篇 .
+           .
+            .
+             .
+              .
+        </text>
+      </view>
+      <view>
+        <text class="line"/>
+        <text>第五篇 .
+           .
+            .
+             .
+              .
+        </text>
+      </view>
+      <view>
+        <text class="line"/>
+        <text>第五篇 .
+           .
+            .
+             .
+              .
+        </text>
+      </view>
     </view>
-    <!-- <view>
-      <view class="text">
-        <text>最近更新</text>
-      </view>
-      <view class="text">
-      </view>
-      <view clas="text">
-      </view>
-    </view> -->
   </view>

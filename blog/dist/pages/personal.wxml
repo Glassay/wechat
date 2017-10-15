@@ -1,0 +1,5 @@
+
+  <view>
+    <text>请保存图片来扫描下面的二维码用来访问我的Github</text>
+    <image src="{{pic}}"/>
+  </view>

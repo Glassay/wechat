@@ -20,7 +20,8 @@ export default class extends wepy.app {
       'pages/home',
       'pages/index',
       'pages/message',
-      'pages/collection'
+      'pages/hot',
+      'pages/personal'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -44,15 +45,15 @@ export default class extends wepy.app {
         iconPath: './image/message.png',
         selectedIconPath: './image/message1.png'
       }, {
-        pagePath: 'pages/collection',
-        text: '收藏',
-        iconPath: './image/like.png',
-        selectedIconPath: './image/like1.png'
+        pagePath: 'pages/hot',
+        text: '热门',
+        iconPath: './image/hot.png',
+        selectedIconPath: './image/hot1.png'
       }, {
-        pagePath: 'pages/',
-        text: 'Github',
-        iconPath: './image/github.png',
-        selectedIconPath: './image/github1.png'
+        pagePath: 'pages/personal',
+        text: '关于我',
+        iconPath: './image/me.png',
+        selectedIconPath: './image/me1.png'
       }]
     }
   }
