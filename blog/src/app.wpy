@@ -16,7 +16,7 @@ import 'wepy-async-function'
 export default class extends wepy.app {
   config = {
     pages: [
-      // // 'pages/ceshi',
+      // 'pages/ceshi',
       'pages/home',
       'pages/index',
       'pages/message',
@@ -25,15 +25,15 @@ export default class extends wepy.app {
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#000000',
+      navigationBarBackgroundColor: '#00AAAA',
       navigationBarTitleText: 'Cheng的BLOG',
       navigationBarTextStyle: 'white',
       enablePullDownRefresh: 'true'
     },
     tabBar: {
-      color: '#DDDDDD',
+      color: '#FFFFFF',
       selectedColor: '#666666',
-      backgroundColor: '#000000',
+      backgroundColor: '#00AAAA',
       list: [{
         pagePath: 'pages/home',
         text: '首页',
@@ -46,14 +46,14 @@ export default class extends wepy.app {
         selectedIconPath: './image/message1.png'
       }, {
         pagePath: 'pages/hot',
-        text: '热门',
-        iconPath: './image/hot.png',
-        selectedIconPath: './image/hot1.png'
+        text: '最多人看',
+        iconPath: './image/like.png',
+        selectedIconPath: './image/like1.png'
       }, {
         pagePath: 'pages/personal',
         text: '关于我',
-        iconPath: './image/me.png',
-        selectedIconPath: './image/me1.png'
+        iconPath: './image/my.png',
+        selectedIconPath: './image/my1.png'
       }]
     }
   }

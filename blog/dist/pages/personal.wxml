@@ -1,5 +1,18 @@
 
   <view>
-    <text>请保存图片来扫描下面的二维码用来访问我的Github</text>
-    <image src="{{pic}}"/>
+    <text style="font-size: 15px; margin-top: 15px">欢迎来到我的博客！有什么意见或建议可以在留言区告诉我或通过下面的联系方式.</text>
+    <view class="head">
+      <image class="pic1" src="{{avatarUrl}}"/>
+      <text style="color: #000000; font-size: 15px;">{{nickName}}</text>
+      <text class="line"/>
+    </view>
+    <view>
+      <view class="info">
+        <image src="{{github}}"/>
+        <!-- <text>Github</text> -->
+        <text>https://github.com/Glassay</text>
+      </view>
+    </view>
+    <text>请扫描下面的二维码用来访问我的Github</text>
+    <image class="pic2" src="{{pic}}"/>
   </view>
