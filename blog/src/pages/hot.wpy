@@ -1,73 +1,33 @@
 <style>
-  .layout {
+  .head {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    background-color: #00AAAA;
+    height: 40px;
+    width: 100%;
+    color: #FFFFFF;
   }
   .back_image {
-    /* display: flex; */
-    background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/20160812/1470965331824426_390x690.jpg");
-    background-attachment: fixed;
-    background-size: auto;
-    /* background-color:blanchedalmond; */
-    position: fixed;
-    width: 100%;
+    background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/2014/1203/20141203104131500_ios.jpg");
+    /* background-repeat: no-repeat; */
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-  }
-  .article {
-    height: 180px;
-    width: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: white;
-    margin-top: 30px;
-  }
-  .last {
-    position: absolute;
-    bottom: 0;
-    background-color: #000000;
-    color: #AAAAAA;
-    font-size: 10px;
-    height: 50px;
     width: 100%;
-    margin-bottom: 15px;
-  }
-  .last_layout {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  } 
-  .image_layout {
-    width: 25px;
-    height: 25px;
-  }
-  .last_layout1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: space-between;
-  }
-  .choose1 {
-    margin: 0px 0px 0px 20px;
-  }
-  .choose2 {
-    margin: 0px 20px 0px 0px;
+    position: fixed;
+    background-size: auto;
+    background-attachment: local;
+    background-size: 100% 100%;
   }
 
 </style>
 
 <template>
-  <view class="layout back_image" style="opacity: 1">
-    <view>
-      <text class="article" style="opacty: 0.5">收藏</text>
+  <view class="back_image">
+    <view class="head">
+      <text>最多人查看</text>
     </view>
   </view>
-  
 </template>
 
 <script>
@@ -76,10 +36,6 @@
     config = {
     }
     data = {
-      pic1: '../image/home.png',
-      pic2: '../image/message.png',
-      pic3: '../image/like.png',
-      pic4: '../image/github.png'
     }
     methods = {
     }

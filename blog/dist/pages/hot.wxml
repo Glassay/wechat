@@ -1,6 +1,6 @@
 
-  <view class="layout back_image" style="opacity: 1">
-    <view>
-      <text class="article" style="opacty: 0.5">收藏</text>
+  <view class="back_image">
+    <view class="head">
+      <text>最多人查看</text>
     </view>
   </view>

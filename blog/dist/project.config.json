@@ -8,7 +8,7 @@
 	},
 	"compileType": "weapp",
 	"libVersion": "1.5.4",
-	"appid": "touristappid",
+	"appid": "wx81ae4383db3a5c54",
 	"projectname": "blog",
 	"condition": {
 		"weapp": {

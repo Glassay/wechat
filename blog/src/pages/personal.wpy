@@ -1,76 +1,134 @@
 <style>
-  .pic1 {
+.pic1 {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.pic2 {
   height: 60px;
   width: 60px;
-  border-radius: 50%;
-  }
-  .pic2 {
-    height: 60px;
-    width: 60px;
-  }
-  .back_image2 {
-    background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/20170508/1494245602627890_390x690.jpg");
-    background-repeat: no-repeat;
-    height: 5000px;
-    width: 100%;
-  } 
-  .head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  .line {
-    background-color: #000000;
-    height: 1px;
-    width: 90%;
-  }
-  .info {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 15px;
-  }
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.line {
+  background-color: #000000;
+  height: 1px;
+  width: 90%;
+  opacity: 0.5;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  margin-top: 15px;
+  background-color: #00AAAA;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  background-color: #00AAAA;
+  margin-top: 30px;
+  opacity: 0.5;
+}
+.back_image {
+  background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/2014/1203/20141203104131500_ios.jpg");
+  /* background-repeat: no-repeat; */
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-size: auto;
+  background-attachment: local;
+  background-size: 100% 100%;
+}
+.head1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  background-color: #00AAAA;
+  height: 40px;
+  width: 100%;
+  color: #FFFFFF;
+}
 </style>
 
 <template>
-  <view>
-    <text style="font-size: 15px; margin-top: 15px">欢迎来到我的博客！有什么意见或建议可以在留言区告诉我或通过下面的联系方式.</text>
+  <view class="back_image">
+    <view class="head1">Welcome To My BLOG</view>
     <view class="head">
       <image class="pic1" src="{{avatarUrl}}"></image>
       <text style="color: #000000; font-size: 15px;">{{nickName}}</text>
       <text class="line"></text>
     </view>
-    <view>
-      <view class="info">
-        <image src="{{github}}"></image>
-        <!-- <text>Github</text> -->
-        <text>https://github.com/Glassay</text>
+    <view style="margin-top: 200px">
+      <view>
+        <view class="layout">
+          <view class="title">
+            <image style="width: 30px; height: 30px" src="{{github}}"></image>
+          </view>
+          <text>https://github.com/Glassay</text>
+        </view>
+        <view class="layout">
+          <view class="title">
+            <image style="width: 30px; height: 30px" src="{{email}}"></image>
+          </view>
+          <text>chengjifeng0215@163.com</text>
+        </view>
+        <view class="layout">
+          <view class="title">
+            <image style="width: 30px; height: 30px" src="{{qq}}"></image>
+            <!-- <text style="font-size: 10px">Q Q</text> -->
+          </view>
+          <text>1285369073</text>
+        </view>
       </view>
     </view>
-    <text>请扫描下面的二维码用来访问我的Github</text>
-    <image class="pic2" src="{{pic}}"></image>
+    <view @tap="onShareAppMessage"></view>
   </view>
 </template>
 
 <script>
-  import wepy from 'wepy'
-  export default class Personal extends wepy.page {
-    data = {
-      avatarUrl: '',
-      nickName: '',
-      pic: '../image/githubf.png',
-      github: '../image/github_logo.png'
-    }
-    onLoad() {
-      let that = this
-      wepy.getUserInfo({
-        success: function(res) {
-          that.nickName = res.userInfo.nickName
-          that.avatarUrl = res.userInfo.avatarUrl
-        }
-      })
+import wepy from 'wepy'
+export default class Personal extends wepy.page {
+  data = {
+    avatarUrl: '',
+    nickName: '',
+    pic: '../image/githubf.png',
+    github: '../image/github_logo.png',
+    email: '../image/email1.png',
+    qq: '../image/qq.png'
+  }
+  methods = {
+    onShareAppMessage() {
+      return {
+        title: 'Cheng的BLOG',
+        path: '/pages/personal'
+      }
     }
   }
+  onLoad() {
+    let that = this
+    wepy.getUserInfo({
+      success: function(res) {
+        that.nickName = res.userInfo.nickName
+        that.avatarUrl = res.userInfo.avatarUrl
+      }
+    })
+  }
+}
 </script>

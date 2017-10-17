@@ -1,5 +1,5 @@
 
-    <view class="head b_image">
+    <view class="back_image">
       <view class="head">
         <text class="title" style="color: white">留言区</text>
       </view>

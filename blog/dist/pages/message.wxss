@@ -4,29 +4,30 @@
     flex-direction: column;
     align-items: center;
     font-size: 15px;
-    background-color: #000000;
+    background-color: #00AAAA;
     height: 40px;
     width: 100%;
   }
-  .title {
+  /* .title {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-  }
+  } */
   .line {
     background-color: #AAAA;
     height: 1px;
     width: 90%;
   }
-  .b_image {
-    background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/2015/0210/20150210054133399_ios.jpg");
-    background-size: auto;
-    background-attachment: local;
-    background-repeat: no-repeat;
-    position: fixed;
+  .back_image {
+    background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/2014/1203/20141203104131500_ios.jpg");
+    /* background-repeat: no-repeat; */
     height: 100%;
     width: 100%;
+    position: fixed;
+    background-size: auto;
+    background-attachment: local;
+    background-size: 100% 100%;
   }
 
