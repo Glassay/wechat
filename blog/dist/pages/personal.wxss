@@ -50,7 +50,7 @@
   /* background-repeat: no-repeat; */
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   background-size: auto;
   background-attachment: local;
   background-size: 100% 100%;

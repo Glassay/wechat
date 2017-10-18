@@ -3,7 +3,7 @@
   background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/2014/1203/20141203104131500_ios.jpg");
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   background-size: auto;
   background-attachment: local;
   background-size: 100% 100%;

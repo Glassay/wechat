@@ -3,7 +3,7 @@
   background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/2014/1203/20141203104131500_ios.jpg");
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   background-size: auto;
   background-attachment: local;
   background-size: 100% 100%;
@@ -68,7 +68,7 @@
 </style>
 
 <template>
-  <view class="back_image1">
+  <view class="back_image1" @tap="onPullDownRefresh">
     <scroll-view scroll-y="true" style="height: 100vh];" bindscroll="scroll" bindscrolltolower="pullUpload">
       <view>
         <view class="fir_view">
@@ -89,9 +89,9 @@
       </view>
       <view wx:for="{{arr}}" wx:key="index">
         <view style="background-color: white; width: 100%; height: 200px; display: inline-blok">
-          <text>第一篇</text>
+          <text>第{{i}}篇</text>
+          <text>{{text}}</text>
           <text class="line"></text>
-          <view></view>
         </view>
       </view>
     </scroll-view>
@@ -110,7 +110,8 @@ export default class Blog extends wepy.page {
     pic1: '../image/moon.jpg',
     avatarUrl: '',
     nickName: '',
-    arr: [1, 2, 3, 4, 5]
+    arr: [1, 2, 3, 4, 5],
+    text: 'hi'
   }
   methods = {
   }
@@ -142,7 +143,12 @@ export default class Blog extends wepy.page {
   onReachBottom() {
     let self = this
     console.log('下拉有惊喜')
-    self.arr.push(1)
+    self.arr.push(3)
+  }
+  onPullDownRefresh() {
+    this.setData({
+      text: 'hello'
+    })
   }
 }
 </script>

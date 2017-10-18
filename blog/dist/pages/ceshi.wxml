@@ -1,35 +1,22 @@
 
   <view>
-    <scroll-view scroll-y="true" style="height: 100vh];" bindscroll="scroll" bindscrolltolower="pullUpload">
-      <view class="back_image1">
-        <view class="fir_view">
-          <view class="weather">
-            <text>{{weather.city.text}} : {{weather.city.data}}</text>
-            <text>{{weather.weather.text}} : {{weather.weather.data}}</text>
-            <text>{{weather.temperature.text}} : {{weather.temperature.data}} ℃</text>
-          </view>
-        </view>
-        <view class="welcome">
-          <view>
-            <image class="avatar" src="{{avatarUrl}}"/>
-            <text style="color: #DDDDDD; font-size: 15px;">{{nickName}}</text>
-          </view>
-        </view>
-        <view class="search">
-          <view class="search1">
-            <input class="search2" placeholder="请输入搜索内容" auto-focus/>
-          </view>
-          <view class="search1">
-            <button size="mini" style="background-color: #FFFFFF">搜索</button>
-          </view>
-        </view>
+    <view>{{shujubangding}}</view>
+
+    <view  wx:for="{{array}}">{{item}}</view>
+
+    <view  wx:if="{{view == 'cheng'}}">CHENG</view>
+    <view wx:elif="{{view == 'app'}}">APP</view>
+    <view wx:else="{{view == 'haha'}}">HH</view>
+
+    <template name="staffName">
+      <view>
+        FirstName: {{FirstName}}, LastName: {{LastName}}
       </view>
-      <view  wx:for="{{arr}}" wx:key="index">
-        <view style="background-color: white; width: 100%; height: 100px; display: inline-blok">
-          <text>{{title}}</text>
-          <text>{{data}}</text>
-          <view class="line"/>
-        </view>
-      </view>
-    </scroll-view>
+    </template>
+    <template is="staffName" data="{{...staffA}}"/>
+    <template is="staffName" data="{{...staffB}}"/>
+    <template is="staffName" data="{{...staffC}}"/>
+
+    <view bindtap="add">{{count}}</view>
+
   </view>
