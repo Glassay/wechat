@@ -1,5 +1,5 @@
 
-  <view class="back_image1" bindtap="onPullDownRefresh">
+  <view class="back_image1">
     <scroll-view scroll-y="true" style="height: 100vh];" bindscroll="scroll" bindscrolltolower="pullUpload">
       <view>
         <view class="fir_view">

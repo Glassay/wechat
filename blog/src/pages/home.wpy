@@ -68,7 +68,7 @@
 </style>
 
 <template>
-  <view class="back_image1" @tap="onPullDownRefresh">
+  <view class="back_image1">
     <scroll-view scroll-y="true" style="height: 100vh];" bindscroll="scroll" bindscrolltolower="pullUpload">
       <view>
         <view class="fir_view">
@@ -111,7 +111,8 @@ export default class Blog extends wepy.page {
     avatarUrl: '',
     nickName: '',
     arr: [1, 2, 3, 4, 5],
-    text: 'hi'
+    text: 'hi',
+    weather: {}
   }
   methods = {
   }
@@ -145,10 +146,10 @@ export default class Blog extends wepy.page {
     console.log('下拉有惊喜')
     self.arr.push(3)
   }
-  onPullDownRefresh() {
-    this.setData({
-      text: 'hello'
-    })
-  }
+  // onPullDownRefresh() {
+  //   this.setData({
+  //     text: 'hello'
+  //   })
+  // }
 }
 </script>
