@@ -1,6 +1,6 @@
 
   <view class="back_image">
-    <view class="head1">Welcome To My BLOG</view>
+    <!-- <view class="head1">Welcome To My BLOG</view> -->
     <view class="head">
       <image class="pic1" src="{{avatarUrl}}"/>
       <text style="color: #000000; font-size: 15px;">{{nickName}}</text>

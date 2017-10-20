@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     font-size: 15px;
-    background-color: #00AAAA;
+    background-color: #00DDDD;
     height: 40px;
     width: 100%;
   }
@@ -35,9 +35,9 @@
 
 <template>
     <view class="back_image">
-      <view class="head">
+      <!-- <view class="head">
         <text class="title" style="color: white">留言区</text>
-      </view>
+      </view> -->
     </view>
   <!-- </view> -->
   
@@ -47,6 +47,7 @@
   import wepy from 'wepy'
   export default class Blog extends wepy.page {
     config = {
+      navigationBarTitleText: '留言区'
     }
     data = {
       pic1: '../image/jiaoliu.png'

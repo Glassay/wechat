@@ -1,12 +1,13 @@
 <style>
 .back_image1 {
   background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/2014/1203/20141203104131500_ios.jpg");
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   position: absolute;
   background-size: auto;
   background-attachment: local;
   background-size: 100% 100%;
+  /* background-repeat: space; */
 
 }
 
@@ -31,10 +32,6 @@
   height: 28px;
 }
 
-.title {
-  font-size: 20px;
-}
-
 .weather {
   display: flex;
   flex-direction: column;
@@ -52,7 +49,7 @@
 
 .line {
   background-color: #000000;
-  height: 1px;
+  height: 0.5px;
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -61,15 +58,29 @@
   margin-top: 8px
 }
 
-.d {
+.article {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+.title {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.eyes {
+  width: 20px;
+  height: 20px;
 }
 </style>
 
 <template>
-  <view class="back_image1">
-    <scroll-view scroll-y="true" style="height: 100vh];" bindscroll="scroll" bindscrolltolower="pullUpload">
+  <view style="background-color: #00DDDD">
+    <scroll-view scroll-y style="height: {{height}}px; width: {{width}}px">
       <view>
         <view class="fir_view">
           <view class="weather">
@@ -88,10 +99,16 @@
         </view>
       </view>
       <view wx:for="{{arr}}" wx:key="index">
-        <view style="background-color: white; width: 100%; height: 200px; display: inline-blok">
-          <text>第{{i}}篇</text>
-          <text>{{text}}</text>
-          <text class="line"></text>
+        <view class="article" style="background-color: white; width: 100%; height: 200px;">
+          <view style="margin-left: 10px">title</view>
+          <view class="title">
+            <view>time</view>
+            <view>
+              <image class="eyes" src="{{eyes}}"></image>
+              <text>count</text>
+            </view>
+          </view>
+          <view class="line"></view>
         </view>
       </view>
     </scroll-view>
@@ -105,14 +122,12 @@ export default class Blog extends wepy.page {
   config = {
   }
   data = {
-    height: 20,
-    focus: false,
-    pic1: '../image/moon.jpg',
     avatarUrl: '',
     nickName: '',
     arr: [1, 2, 3, 4, 5],
-    text: 'hi',
-    weather: {}
+    eyes: '../image/eyes.png'
+    // title: 'hi'
+    // weather: {}
   }
   methods = {
   }
@@ -139,6 +154,12 @@ export default class Blog extends wepy.page {
       title: '加载中',
       icon: 'loading',
       duration: 1000
+    })
+    wepy.getSystemInfo({
+      success(res) {
+        that.height = res.windowHeight
+        that.width = res.windowWidth
+      }
     })
   }
   onReachBottom() {
