@@ -1,0 +1,41 @@
+
+  <view>
+    <view>
+      <video style="width: 100%" src="http://www.w3school.com.cn//i/movie.mp4" binderror="videoErrorCallback"/>
+    </view>
+    <view class="whole_info">
+      <view><image style="width: 80px; height: 80px" src="https://img.taptapdada.com/market/lcs/84dd395551187a7bcf89af93cc1f1d67_360.png?imageMogr2/auto-orient/strip"/></view>
+      <view class="info">
+        <text style="font-size: 15px">魔性建筑工</text>
+        <text style="color: #00DDDD; font-size: 11px">厂商：睡神飞工作室</text>
+        <text style="font-size: 11px">75198人安装</text>
+        <text class="from" style="background-color: #00DDDD; color: #FFFFFF; font-size: 11px">编辑推荐</text>
+      </view>
+      <view class="grade">
+        <text style="font-size: 8px; color: white; margin-top: 6px">TapTap</text>
+        <text style="color: white; font-size: 30px;">9.2</text>
+      </view>
+    </view>
+    <view class="guan_xia">
+      <image style="width: 20px; height: 20px; margin: 8px 0px 0px 13rem" src="{{like}}"/>
+      <text class="guanzhu">关注</text>
+      <text class="xiazai">下载</text>
+    </view>
+    <view class="line"/>
+    <view>
+      <view class="xiangqing">
+        <view bindtap="xiangqing" class="xiangqing1" style="width: 33.333%">
+          <view style="color: {{xiangqing_color}}">详情</view>
+          <view style="background-color: #00DDDD" class="xiangq_line"/>
+        </view>
+        <view class="xiangqing1" style="width: 33.333%">
+          <view><text>评价</text></view>
+          <view class="xiangq_line"/>
+        </view>
+        <view class="xiangqing1" style="width: 33.333%">
+          <view><text>论坛</text></view>
+          <view class="xiangq_line"/>
+        </view>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,62 @@
+<style>
+.from {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px 0px 15px;
+}
+.title {
+  font-size: 13px;
+  margin: 8px 0px 8px 15px;
+}
+.pic {
+  width: 100%;
+  height: 180px;
+}
+.last {
+  background-color: #DDDDDD;
+  width: 100%;
+  height: 8px;
+}
+</style>
+
+<template>
+  <view>
+    <view @tap="click">
+        <view class="from">
+          <view>
+            <image style="width: 20px; height: 20px" src="https://img.taptapdada.com/market/lcs/84dd395551187a7bcf89af93cc1f1d67_360.png?imageMogr2/auto-orient/strip"></image>
+            <text style="font-size: 13px; color: #DDDDDD">来自编辑的推荐</text>
+          </view>
+          <view>
+            <image style="width: 20px; height: 20px" src="{{point}}"></image>
+          </view>
+        </view>
+        <view class="title">魔性建筑工</view>
+        <image class="pic" src="https://img.taptapdada.com/market/images/88e56419cb46382f5dbee4330dcbc497.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1" mode="widthFix heightFix"></image>
+        <view class="title" style="font-size: 13px">你手速很快？...不存在的！最后一关能上十分算我输.</view>
+        <view class="last"></view>
+    </view>
+  </view>
+  
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Home extends wepy.page {
+    config = {
+      navigationBarTitleText: 'TapTap'
+    }
+    data = {
+      point: '../image/point.png'
+    }
+    methods = {
+      click() {
+        wepy.navigateTo({
+          url: './info'
+        })
+      }
+    }
+  }
+</script>

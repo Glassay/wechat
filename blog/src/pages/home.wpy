@@ -126,8 +126,6 @@ export default class Blog extends wepy.page {
     nickName: '',
     arr: [1, 2, 3, 4, 5],
     eyes: '../image/eyes.png'
-    // title: 'hi'
-    // weather: {}
   }
   methods = {
   }

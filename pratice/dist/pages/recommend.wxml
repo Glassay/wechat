@@ -1,0 +1,18 @@
+
+  <view>
+    <view bindtap="click">
+        <view class="from">
+          <view>
+            <image style="width: 20px; height: 20px" src="https://img.taptapdada.com/market/lcs/84dd395551187a7bcf89af93cc1f1d67_360.png?imageMogr2/auto-orient/strip"/>
+            <text style="font-size: 13px; color: #DDDDDD">来自编辑的推荐</text>
+          </view>
+          <view>
+            <image style="width: 20px; height: 20px" src="{{point}}"/>
+          </view>
+        </view>
+        <view class="title">魔性建筑工</view>
+        <image class="pic" src="https://img.taptapdada.com/market/images/88e56419cb46382f5dbee4330dcbc497.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1" mode="widthFix heightFix"/>
+        <view class="title" style="font-size: 13px">你手速很快？...不存在的！最后一关能上十分算我输.</view>
+        <view class="last"/>
+    </view>
+  </view>

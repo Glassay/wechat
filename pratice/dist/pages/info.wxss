@@ -1,0 +1,74 @@
+
+.whole_info {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+  align-items: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.from {
+  border: 1px solid white;
+  width: 50px;
+  border-radius: 5px;
+}
+.grade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #00DDDD;
+  margin-left: 5rem;
+  box-shadow: 4px 5px 5px #00AAAA;
+}
+.line {
+  background-color: #888888;
+  height: 0.5px;
+  width: 100%;
+  margin-top: 8px;
+}
+.guanzhu {
+  border: 1px solid #00DDDD;
+  width: 40px;
+  border-radius: 5px;
+  color: #00DDDD;
+  font-size: 15px;
+  margin-left: 0.7rem;
+}
+.xiazai {
+  border: 1px solid #00DDDD;
+  width: 40px;
+  border-radius: 5px;
+  background-color: #00DDDD;
+  font-size: 15px;
+  margin-left: 0.5rem;
+}
+.guan_xia {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.xiangqing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+.xiangq_line {
+  /* background-color: #00DDDD; */
+  height: 5px;
+  width: 100%;
+}
+.xiangqing1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

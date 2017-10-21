@@ -1,0 +1,19 @@
+<style>
+
+</style>
+
+<template>
+  <view>
+    <text>论坛</text>
+  </view>
+  
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Home extends wepy.page {
+    config = {
+      navigationBarTitleText: 'TapTap'
+    }
+  }
+</script>
