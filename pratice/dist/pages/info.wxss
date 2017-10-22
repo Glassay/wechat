@@ -27,7 +27,7 @@
   box-shadow: 4px 5px 5px #00AAAA;
 }
 .line {
-  background-color: #888888;
+  background-color: #AAAAAA;
   height: 0.5px;
   width: 100%;
   margin-top: 8px;
@@ -71,4 +71,43 @@
   justify-content: center;
   align-items: center;
 }
-
+.shouqi {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0px 10px 5px 0px;
+  color: #00DDDD;
+  font-size: 15px;
+}
+.qun {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #00DDDD;
+  margin: 2px 0px 2px 0px;
+  align-items: center;
+}
+.biaoqian {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+}
+.single_biaoqian {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #00DDDD;
+  color: #00DDDD;
+  width: 40px;
+  height: 18px;
+  border-radius: 5px;
+  margin: 3px 10px 3px 10px;
+  font-size: 10px;
+}
+.pic {
+  display: flex;
+  flex-direction: row;
+}
