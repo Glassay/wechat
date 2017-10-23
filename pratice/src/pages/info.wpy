@@ -111,6 +111,10 @@
   display: flex;
   flex-direction: row;
 }
+.pic_size {
+  width: 120px;
+  height: 200px;
+}
 </style>
 
 <template>
@@ -174,25 +178,32 @@
         <view class="single_biaoqian" style="margin-left: 6rem"><image style="width: 10px; height: 10px" src="{{shizi}}"></image></view>
       </view>
       <view style="background-color: #DDDDDD; margin-top: 10px">
-        <scroll-view scroll-x="true" bindscroll="scroll">
-          <view class="pic">
-            <image style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/d6ff9bdfd23b147b9dc5152add2d8210.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image>
-            <image style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/d238b0a666f764a917f61f616a007fab.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image>
-            <image style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/2fabfc67c8f70c1bd39de97705da3bd3.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image>
-            <image style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/fb9703186c5e8f132d17a8a25e44a15e.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image>
-            <image style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/3ddbd4177c068d33d4a7e4221157d75f.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image>
-            <image style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/d6ff9bdfd23b147b9dc5152add2d8210.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image>
-            <image style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/d238b0a666f764a917f61f616a007fab.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image>
-            <image style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/2fabfc67c8f70c1bd39de97705da3bd3.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image>
-            <image style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/fb9703186c5e8f132d17a8a25e44a15e.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image>
-            <image style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/3ddbd4177c068d33d4a7e4221157d75f.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image>
+        <scroll-view scroll-x="true">
+          <view class="pic" bindscroll="scroll">
+            <view><image class="pic_size" style="margin: 10px" src="https://img.taptapdada.com/market/images/d6ff9bdfd23b147b9dc5152add2d8210.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image></view>
+            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/d238b0a666f764a917f61f616a007fab.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image></view>
+            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/2fabfc67c8f70c1bd39de97705da3bd3.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image></view>
+            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/fb9703186c5e8f132d17a8a25e44a15e.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image></view>
+            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/3ddbd4177c068d33d4a7e4221157d75f.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image></view>
+            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/d6ff9bdfd23b147b9dc5152add2d8210.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image></view>
+            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/d238b0a666f764a917f61f616a007fab.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image></view>
+            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/2fabfc67c8f70c1bd39de97705da3bd3.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image></view>
+            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/fb9703186c5e8f132d17a8a25e44a15e.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image></view>
+            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/3ddbd4177c068d33d4a7e4221157d75f.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"></image></view>
           </view>
         </scroll-view>
       </view>
       <view>
-        <text>简体中文</text>
-        <text>英文</text>
-        <text>有内购</text>
+        <view>
+
+          <text>简体中文</text>
+        </view>
+        <view>
+          <text>英文</text>
+        </view>
+        <view>
+          <text>有内购</text>
+        </view>
       </view>
     </view>
   </view>
