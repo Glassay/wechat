@@ -1,174 +1,112 @@
 <style>
-.back_image1 {
-  background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/2014/1203/20141203104131500_ios.jpg");
-  /* height: 100%; */
-  width: 100%;
-  position: absolute;
-  background-size: auto;
-  background-attachment: local;
-  background-size: 100% 100%;
-  /* background-repeat: space; */
-
+.view {
+  background-color: #CCEEFF;
 }
-
-.search {
+.time {
   display: flex;
   flex-direction: row;
-  margin: 10px 0px 10px 10px;
+  font-size: 10px;
+  color: #000000;
 }
-
-.search1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-}
-
-.search2 {
-  border: 1px solid #FFFFFF;
-  color: #FFFFFF;
-  width: 120px;
-  height: 28px;
-}
-
-.weather {
-  display: flex;
-  flex-direction: column;
-  color: #FFFFFF;
-  font-size: 15px;
-  margin: 10px 0px 0px 10px;
-}
-
-.welcome {
+.type {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px 0px 0px 10px;
-}
-
-.line {
-  background-color: #000000;
-  height: 0.5px;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin-top: 8px
+  background-color: #CCEEFF;
+  /* margin-top: 10px; */
 }
-
-.article {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  margin-bottom: 10px;
-
-}
-.title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.eyes {
-  width: 20px;
-  height: 20px;
+.image {
+  border: 1px solid #BBFFEE;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 2px 2px 3px #888888;
 }
 </style>
 
 <template>
-  <view style="background-color: #00DDDD">
-    <scroll-view scroll-y style="height: {{height}}px; width: {{width}}px">
+  <view class="view">
+    <view class="type" @tap="js">
       <view>
-        <view class="fir_view">
-          <view class="weather">
-            <text>{{weather.city.text}} : {{weather.city.data}}</text>
-            <text>{{weather.weather.text}} : {{weather.weather.data}}</text>
-            <text>{{weather.temperature.text}} : {{weather.temperature.data}} ℃</text>
-          </view>
-        </view>
-        <view class="search">
-          <view class="search1">
-            <input class="search2" placeholder="请输入搜索内容" auto-focus/>
-          </view>
-          <view class="search1">
-            <button size="mini" style="background-color: #FFFFFF">搜索</button>
-          </view>
-        </view>
+        <image class="image" src="https://www.javascript.com/images/meta/facebook.png"></image>
       </view>
-      <view wx:for="{{arr}}" wx:key="index">
-        <view class="article" style="background-color: white; width: 100%; height: 200px;">
-          <view style="margin-left: 10px">title</view>
-          <view class="title">
-            <view>time</view>
-            <view>
-              <image class="eyes" src="{{eyes}}"></image>
-              <text>count</text>
-            </view>
-          </view>
-          <view class="line"></view>
-        </view>
+      <view class="time">
+        <view style="font-size: 20px">JavaScript</view>
       </view>
-    </scroll-view>
+    </view>
+    <view class="type" @tap="node">
+      <view><image class="image" src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/nodejs-frameworks.png"></image></view>
+      <view class="time">
+        <view style="font-size: 20px">Node</view>
+      </view>
+    </view>
+    <view class="type" @tap="h5">
+      <view>
+        <image class="image" src="https://www.sololearn.com/Uploads/html-css.jpg"></image>
+      </view>
+      <view class="time">
+        <view style="font-size: 20px">H5</view>
+      </view>
+    </view>
+    <view class="type" @tap="mysql">
+      <view>
+        <image class="image" src="https://farm4.staticflickr.com/3913/14522157584_a67ab2e898_o_d.png"></image>
+      </view>
+      <view class="time">
+        <view style="font-size: 20px">MySQL</view>
+      </view>
+    </view>
   </view>
 </template>
 
 <script>
 import wepy from 'wepy'
-var amapFile = require('../libs/amap-wx.js')
 export default class Blog extends wepy.page {
   config = {
   }
   data = {
-    avatarUrl: '',
-    nickName: '',
-    arr: [1, 2, 3, 4, 5],
-    eyes: '../image/eyes.png'
   }
   methods = {
+    js() {
+      wepy.navigateTo({
+        url: './js'
+      })
+    },
+    node() {
+      wepy.navigateTo({
+        url: './node'
+      })
+    },
+    h5() {
+      wepy.navigateTo({
+        url: './h5'
+      })
+    },
+    mysql() {
+      wepy.navigateTo({
+        url: './mysql'
+      })
+    }
   }
   onLoad() {
-    let that = this
-    let myAmapFun = new amapFile.AMapWX({ key: 'ca81d5c32578c8bc0c54b46f26ae8403' })
-    myAmapFun.getWeather({
-      success: function(data) {
-        that.setData({
-          weather: data
-        })
-      },
-      fail: function(info) {
-        console.log(info)
-      }
-    })
+    let self = this
     wepy.getUserInfo({
       success: function(res) {
-        that.nickName = res.userInfo.nickName
-        that.avatarUrl = res.userInfo.avatarUrl
+        self.nickName = res.userInfo.nickName
+        self.avatarUrl = res.userInfo.avatarUrl
       }
     })
     wepy.showToast({
       title: '加载中',
       icon: 'loading',
-      duration: 1000
+      duration: 800
     })
     wepy.getSystemInfo({
       success(res) {
-        that.height = res.windowHeight
-        that.width = res.windowWidth
+        self.height = res.windowHeight
+        self.width = res.windowWidth
       }
     })
   }
-  onReachBottom() {
-    let self = this
-    console.log('下拉有惊喜')
-    self.arr.push(3)
-  }
-  // onPullDownRefresh() {
-  //   this.setData({
-  //     text: 'hello'
-  //   })
-  // }
 }
 </script>

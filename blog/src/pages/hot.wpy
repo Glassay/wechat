@@ -1,33 +1,19 @@
 <style>
-  .head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 15px;
-    background-color: #00DDDD;
-    height: 40px;
-    width: 100%;
-    color: #FFFFFF;
-    border-top: 1px solid black;
-  }
-  .back_image {
-    background-image: url("https://img.25pp.com/uploadfile/bizhi/iphone6p/2014/1203/20141203104131500_ios.jpg");
-    /* background-repeat: no-repeat; */
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-size: auto;
-    background-attachment: local;
-    background-size: 100% 100%;
-  }
-
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 </style>
 
 <template>
-  <view class="back_image">
-    <!-- <view class="head">
-      <text>最多人查看</text>
-    </view> -->
+  <view style="background-color: #CCEEFF">
+    <view class="head">
+      <view>JavaScript</view>
+      <view>H5</view>
+      <view>MySQL</view>
+      <view>Node</view>
+    </view>
   </view>
 </template>
 
@@ -40,6 +26,15 @@
     data = {
     }
     methods = {
+    }
+    onLoad() {
+      let self = this
+      wepy.getSystemInfo({
+        success(res) {
+          self.height = res.windowHeight
+          self.width = res.windowWidth
+        }
+      })
     }
   }
 </script>

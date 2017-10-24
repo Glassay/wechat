@@ -1,35 +1,33 @@
 
-  <view style="background-color: #00DDDD">
-    <scroll-view scroll-y style="height: {{height}}px; width: {{width}}px">
+  <view class="view">
+    <view class="type" bindtap="js">
       <view>
-        <view class="fir_view">
-          <view class="weather">
-            <text>{{weather.city.text}} : {{weather.city.data}}</text>
-            <text>{{weather.weather.text}} : {{weather.weather.data}}</text>
-            <text>{{weather.temperature.text}} : {{weather.temperature.data}} ℃</text>
-          </view>
-        </view>
-        <view class="search">
-          <view class="search1">
-            <input class="search2" placeholder="请输入搜索内容" auto-focus/>
-          </view>
-          <view class="search1">
-            <button size="mini" style="background-color: #FFFFFF">搜索</button>
-          </view>
-        </view>
+        <image class="image" src="https://www.javascript.com/images/meta/facebook.png"/>
       </view>
-      <view  wx:for="{{arr}}" wx:key="index">
-        <view class="article" style="background-color: white; width: 100%; height: 200px;">
-          <view style="margin-left: 10px">title</view>
-          <view class="title">
-            <view>time</view>
-            <view>
-              <image class="eyes" src="{{eyes}}"/>
-              <text>count</text>
-            </view>
-          </view>
-          <view class="line"/>
-        </view>
+      <view class="time">
+        <view style="font-size: 20px">JavaScript</view>
       </view>
-    </scroll-view>
+    </view>
+    <view class="type" bindtap="node">
+      <view><image class="image" src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/nodejs-frameworks.png"/></view>
+      <view class="time">
+        <view style="font-size: 20px">Node</view>
+      </view>
+    </view>
+    <view class="type" bindtap="h5">
+      <view>
+        <image class="image" src="https://www.sololearn.com/Uploads/html-css.jpg"/>
+      </view>
+      <view class="time">
+        <view style="font-size: 20px">H5</view>
+      </view>
+    </view>
+    <view class="type" bindtap="mysql">
+      <view>
+        <image class="image" src="https://farm4.staticflickr.com/3913/14522157584_a67ab2e898_o_d.png"/>
+      </view>
+      <view class="time">
+        <view style="font-size: 20px">MySQL</view>
+      </view>
+    </view>
   </view>

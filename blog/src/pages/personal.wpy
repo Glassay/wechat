@@ -36,6 +36,7 @@
 .title {
   display: flex;
   flex-direction: column;
+  margin-left: 1rem;
 }
 
 .layout {
@@ -69,7 +70,6 @@
 
 <template>
   <view class="back_image">
-    <!-- <view class="head1">Welcome To My BLOG</view> -->
     <view class="head">
       <image class="pic1" src="{{avatarUrl}}"></image>
       <text style="color: #000000; font-size: 15px;">{{nickName}}</text>
@@ -92,7 +92,6 @@
         <view class="layout">
           <view class="title">
             <image style="width: 30px; height: 30px" src="{{qq}}"></image>
-            <!-- <text style="font-size: 10px">Q Q</text> -->
           </view>
           <text>1285369073</text>
         </view>
@@ -125,11 +124,11 @@ export default class Personal extends wepy.page {
     }
   }
   onLoad() {
-    let that = this
+    let self = this
     wepy.getUserInfo({
       success: function(res) {
-        that.nickName = res.userInfo.nickName
-        that.avatarUrl = res.userInfo.avatarUrl
+        self.nickName = res.userInfo.nickName
+        self.avatarUrl = res.userInfo.avatarUrl
       }
     })
   }
