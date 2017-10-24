@@ -42,8 +42,8 @@
     <view style="background-color: #DDDDDD; height: 5px; width: 100%; box-shadow: 0px -1px 3px #AAAAAA;"/>
     <view>
       <view style="margin: 5px 0px 0px 10px; font-size: 18px;">开发者的话</view>
-      <view style="font-size: 15px; color: #888888; margin: 0px 10px 0px 10px"  wx:if="{{isFold}}">睡神又来祸害大家啦！失踪人口回归！首先抱歉地告诉大家《喵星心机站》会跳票很久，一系列新游戏正在制作中，为缓解大家等待时手痒之苦，即将推出一款开胃菜，保证贱手虐心~~~最后一关你能上十分算我输.</view>
-      <view style="font-size: 15px; color: #888888; margin: 0px 10px 0px 0px"  wx:else>睡神又来祸害大家啦！失踪人口回归！首先抱歉地告诉大家《喵星心机站》会跳票很久，一系列新游戏正在</view>
+      <view class="jianjie_text"  wx:if="{{isFold}}">睡神又来祸害大家啦！失踪人口回归！首先抱歉地告诉大家《喵星心机站》会跳票很久，一系列新游戏正在制作中，为缓解大家等待时手痒之苦，即将推出一款开胃菜，保证贱手虐心~~~最后一关你能上十分算我输.</view>
+      <view class="jianjie_text"  wx:else>睡神又来祸害大家啦！失踪人口回归！首先抱歉地告诉大家《喵星心机站》会跳票很久，一系列新游戏正在</view>
       <view bindtap="flodFn" class="shouqi">{{shouqi}}</view>
       <view style="background-color: #DDDDDD; height: 5px; width: 100%"/>
       <view class="qun">
@@ -61,30 +61,67 @@
       <view style="background-color: #DDDDDD; margin-top: 10px">
         <scroll-view scroll-x="true">
           <view class="pic" bindscroll="scroll">
-            <view><image class="pic_size" style="margin: 10px" src="https://img.taptapdada.com/market/images/d6ff9bdfd23b147b9dc5152add2d8210.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
-            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/d238b0a666f764a917f61f616a007fab.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
-            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/2fabfc67c8f70c1bd39de97705da3bd3.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
-            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/fb9703186c5e8f132d17a8a25e44a15e.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
-            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/3ddbd4177c068d33d4a7e4221157d75f.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
-            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/d6ff9bdfd23b147b9dc5152add2d8210.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
-            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/d238b0a666f764a917f61f616a007fab.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
-            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/2fabfc67c8f70c1bd39de97705da3bd3.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
-            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/fb9703186c5e8f132d17a8a25e44a15e.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
-            <view><image class="pic_size" style="margin: 10px" mode="aspectFill" src="https://img.taptapdada.com/market/images/3ddbd4177c068d33d4a7e4221157d75f.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
+            <view><image class="pic_size" style="margin: 0.4rem" src="https://img.taptapdada.com/market/images/d6ff9bdfd23b147b9dc5152add2d8210.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
+            <view><image class="pic_size" style="margin: 0.4rem" mode="aspectFill" src="https://img.taptapdada.com/market/images/d238b0a666f764a917f61f616a007fab.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
+            <view><image class="pic_size" style="margin: 0.4rem" mode="aspectFill" src="https://img.taptapdada.com/market/images/2fabfc67c8f70c1bd39de97705da3bd3.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
+            <view><image class="pic_size" style="margin: 0.4rem" mode="aspectFill" src="https://img.taptapdada.com/market/images/fb9703186c5e8f132d17a8a25e44a15e.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
+            <view><image class="pic_size" style="margin: 0.4rem" mode="aspectFill" src="https://img.taptapdada.com/market/images/3ddbd4177c068d33d4a7e4221157d75f.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
           </view>
         </scroll-view>
       </view>
-      <view>
-        <view>
-
+      <view class="remark_view">
+        <view class="remark">
+          <view class="remark_icon">中</view>
           <text>简体中文</text>
         </view>
-        <view>
+        <view class="remark">
+          <view class="remark_icon">EN</view>
           <text>英文</text>
         </view>
-        <view>
+        <view class="remark">
+          <view class="remark_icon">购</view>
           <text>有内购</text>
         </view>
+      </view>
+      <view class="line"/>
+      <view class="line"/>
+      <view>
+        <view class="jianjie_title">简介</view>
+        <view>
+          <view class="jianjie_text" wx:if="{{isFold1}}">你手速很快？不存在的！最后一关能上10分算我输~~~手残党终于有回想起被睡神呼哈呼哈停不下来的恐怖！
+          两个好基友有在工地上来搞事了,这次他们要挑战各种新方法来建楼,也会各种花式死法</view>
+          <view class="jianjie_text" wx:else>你手速很快？不存在的！最后一关能上10分算我输~~~手残党终于有回想起被睡神呼哈呼哈停不下来的恐怖！
+            两个好基友有在工地上来搞事了,这次他们要挑战各种新方法来建楼,也会各种花式死法
+            ......</view>
+          <view class="shouqi" bindtap="flodFn1">{{shouqi1}}</view>
+        </view>
+      </view>
+      <view class="line"/>
+      <view class="line"/>
+      <view>
+        <view class="jianjie_title">更新内容</view>
+        <view class="jianjie_text">【2.0版更新内容】</view>
+        <view class="jianjie_text" wx:if="{{isFold2}}">1.增加死亡次数统计功能,包括每关死亡次数和总死亡数.2.增加抢救一下的功能,每局能复活一次,可用10次死亡换1次复活.
+        </view>
+        <view class="jianjie_text" wx:else>1.增加死亡次数统计功能,包括每关死亡次数和总死亡数.2.增加抢救一下的功能,每局能复活一次,可用10次死亡换1次复活....</view>
+        <view class="shouqi" bindtap="flodFn2">{{shouqi2}}</view>
+      </view>
+      <view class="line"/>
+      <view class="line"/>
+      <view>
+        <view class="jianjie_title">详细内容</view>
+        <view class="jianjie_text">下载量：221750次</view>
+        <view class="jianjie_text">当前版本：2.0</view>
+        <view class="jianjie_text">大小：28.74MB</view>
+        <view class="jianjie_text">更新日期：2017-10-21</view>
+        <view class="jianjie_text">厂商：睡神飞工作室</view>
+      </view>
+      <view style="background-color: #DDDDDD; height: 5px; width: 100%"/>
+    </view>
+    <view>
+      <view class="comment_head">
+        <view class="jianjie_title">评价</view>
+        <view style="font-size: 15px; color: #00DDDD">更多</view>
       </view>
     </view>
   </view>
