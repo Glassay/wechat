@@ -1,2 +1,19 @@
 
-
+.swiper {
+  display: flex;
+  width: 100%;
+}
+.sort {
+  display: flex;
+  /* align-items: center;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin-right: 10px; */
+}
+.single_sort {
+  height: 1rem;
+  width: 4rem;
+  background-color: #00DDDD;
+  border: 1px solid #FFFFFF;
+  border-radius: 2rem;
+}

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
+exports.default = undefined;
 
 var _wepy = require('./../npm/wepy/lib/wepy.js');
 
@@ -39,7 +39,5 @@ var Home = function (_wepy$page) {
   return Home;
 }(_wepy2.default.page);
 
-
-Page(require('./../npm/wepy/lib/wepy.js').default.$createPage(Home , 'pages/forum'));
-
+exports.default = Home;
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvcnVtLmpzIl0sIm5hbWVzIjpbIkhvbWUiLCJjb25maWciLCJuYXZpZ2F0aW9uQmFyVGl0bGVUZXh0IiwicGFnZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUNFOzs7Ozs7Ozs7Ozs7SUFDcUJBLEk7Ozs7Ozs7Ozs7Ozs7O2tMQUNuQkMsTSxHQUFTO0FBQ1BDLDhCQUF3QjtBQURqQixLOzs7O0VBRHVCLGVBQUtDLEk7O2tCQUFsQkgsSSIsImZpbGUiOiJmb3J1bS5qcyIsInNvdXJjZXNDb250ZW50IjpbIlxuICBpbXBvcnQgd2VweSBmcm9tICd3ZXB5J1xuICBleHBvcnQgZGVmYXVsdCBjbGFzcyBIb21lIGV4dGVuZHMgd2VweS5wYWdlIHtcbiAgICBjb25maWcgPSB7XG4gICAgICBuYXZpZ2F0aW9uQmFyVGl0bGVUZXh0OiAnVGFwVGFwJ1xuICAgIH1cbiAgfVxuIl19

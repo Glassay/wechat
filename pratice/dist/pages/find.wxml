@@ -1,4 +1,30 @@
 
   <view>
-    <text>发现</text>
+    <view>
+      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+        <block  wx:for="{{imagUrls}}" wx:for-index="index">
+          <swiper-item>
+            <image class="swiper" src="{{item}}" mode="widthFix"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <scroll-view scroll-x="true">
+      <view class="sort">
+        <view  wx:for="{{[1, 2, 3, 4, 5, 6, 7]}}" wx:key="index">
+          <view class="single_sort">新游预约</view>
+        </view>
+        <!-- <view class="single_sort">角色扮演</view>
+        <view class="single_sort">动作</view>
+        <view class="single_sort">策略</view>
+        <view class="single_sort">模拟</view>
+        <view class="single_sort">益智</view>
+        <view class="single_sort">新游预约</view>
+        <view class="single_sort">角色扮演</view>
+        <view class="single_sort">动作</view>
+        <view class="single_sort">策略</view>
+        <view class="single_sort">模拟</view>
+        <view class="single_sort">益智</view> -->
+      </view>
+    </scroll-view>
   </view>
