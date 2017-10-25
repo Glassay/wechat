@@ -36,61 +36,34 @@
 <template>
   <view>
     <view class="content">
-      <view class="small_content">
-        <view>第1篇</view>
+      <view class="small_content" wx:for="{{js}}" wx:key="index">
+        <view>{{item.title}}</view>
+        <view class="line"></view>
         <view class="line"></view>
         <view class="label">
-          <view>JavaScript</view>
-          <view>|</view>
-          <view>time</view>
+          <view>{{item.type}}</view>
+          <view>{{item.column_line}}</view>
+          <view>{{item.data}}</view>
         </view>
-      </view>
-    </view>
-    <view class="content">
-      <view class="small_content">
-        <view>第2篇</view>
-        <view class="line"></view>
-      </view>
-    </view>
-    <view class="content">
-      <view class="small_content">
-        <view>第3篇</view>
-        <view class="line"></view>
-      </view>
-    </view>
-    <view class="content">
-      <view class="small_content">
-        <view>第4篇</view>
-        <view class="line"></view>
-      </view>
-    </view>
-    <view class="content">
-      <view class="small_content">
-        <view>第5篇</view>
-        <view class="line"></view>
-      </view>
-    </view>
-    <view class="content">
-      <view class="small_content">
-        <view>第6篇</view>
-        <view class="line"></view>
       </view>
     </view>
   </view>
 </template>
-
 <script>
+  import js from '../content/js.js'
   import wepy from 'wepy'
-  export default class Blog extends wepy.page {
+  export default class Js extends wepy.page {
     config = {
       navigationBarTitleText: 'JavaScript'
     }
     data = {
+      js: []
     }
     methods = {
     }
     onLoad() {
       let self = this
+      self.js = js
       wepy.getSystemInfo({
         success(res) {
           self.height = res.windowHeight

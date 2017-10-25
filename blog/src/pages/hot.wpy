@@ -19,7 +19,7 @@
 
 <script>
   import wepy from 'wepy'
-  export default class Blog extends wepy.page {
+  export default class Hot extends wepy.page {
     config = {
       navigationBarTitleText: '最多人看'
     }
