@@ -1,8 +1,8 @@
 
   <view>
     <view>
-      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
-        <block  wx:for="{{imagUrls}}" wx:for-index="index">
+      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true">
+        <block  wx:for="{{imagUrls}}" wx:key="index">
           <swiper-item>
             <image class="swiper" src="{{item}}" mode="widthFix"/>
           </swiper-item>
@@ -10,21 +10,66 @@
       </swiper>
     </view>
     <scroll-view scroll-x="true">
-      <view class="sort">
-        <view  wx:for="{{[1, 2, 3, 4, 5, 6, 7]}}" wx:key="index">
-          <view class="single_sort">新游预约</view>
+      <view class="sort" bindscroll="scroll">
+        <view  wx:for="{{label}}" wx:key="index">
+          <view class="single_sort"><text>{{item.title}}</text></view>
         </view>
-        <!-- <view class="single_sort">角色扮演</view>
-        <view class="single_sort">动作</view>
-        <view class="single_sort">策略</view>
-        <view class="single_sort">模拟</view>
-        <view class="single_sort">益智</view>
-        <view class="single_sort">新游预约</view>
-        <view class="single_sort">角色扮演</view>
-        <view class="single_sort">动作</view>
-        <view class="single_sort">策略</view>
-        <view class="single_sort">模拟</view>
-        <view class="single_sort">益智</view> -->
       </view>
     </scroll-view>
+    <view class="line"/>
+    <view>
+      <view class="single_title">每日新发现</view>
+      <scroll-view scroll-x="true">
+        <view class="type">
+          <view wx:for="{{dgame}}" wx:key="index">
+            <view class="single_game">
+              <image class="image" src="{{item.pic}}"/>
+              <view class="game_name">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="line"/>
+    <view>
+      <scroll-view scroll-x="true">
+      <view class="channel_view">
+        <view wx:for="{{channel}}" wx:key="index">
+          <view>
+            <image class="single_channel" src="{{item.pic}}"/>
+          </view>
+        </view>
+      </view>
+      </scroll-view>
+    </view>
+    <view class="line"/>
+    <view class="line"/>
+    <view>
+      <view class="single_title">新游预约</view>
+      <scroll-view scroll-x="true">
+        <view class="type">
+          <view wx:for="{{ngame}}" wx:key="index">
+            <view class="single_game">
+              <image class="image" src="{{item.pic}}"/>
+              <view class="game_name">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="line"/>
+    <view class="line"/>
+    <view>
+      <view class="single_title">近期最热</view>
+      <scroll-view scroll-x="true">
+        <view class="type">
+          <view wx:for="{{hgame}}" wx:key="index">
+            <view class="single_game">
+              <image class="image" src="{{item.pic}}"/>
+              <view class="game_name">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
   </view>

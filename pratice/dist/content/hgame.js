@@ -1,0 +1,19 @@
+'use strict';
+
+module.exports = [{
+  pic: 'https://img.taptapdada.com/market/lcs/838029f2fad411aef628283db7e12d6b_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '放逐游戏'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/a7900f1f864860bf1e3403011344ebde_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '丛林法则'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/f60c749c65dffb91de3b55ecefd97963_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '我的世界'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/93f67c55f91d3b36286fdf6585e34b2c_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '真人汽车驾驶'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/82bfb4032df3766425d5584bce44d1cf_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '信任的进化'
+}];
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhnYW1lLmpzIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJwaWMiLCJuYW1lIl0sIm1hcHBpbmdzIjoiOztBQUFBQSxPQUFPQyxPQUFQLEdBQWlCLENBQ2Y7QUFDRUMsT0FBSyxtSUFEUDtBQUVFQyxRQUFNO0FBRlIsQ0FEZSxFQUlaO0FBQ0RELE9BQUssbUlBREo7QUFFREMsUUFBTTtBQUZMLENBSlksRUFPWjtBQUNERCxPQUFLLG1JQURKO0FBRURDLFFBQU07QUFGTCxDQVBZLEVBVVo7QUFDREQsT0FBSyxtSUFESjtBQUVEQyxRQUFNO0FBRkwsQ0FWWSxFQWFaO0FBQ0RELE9BQUssbUlBREo7QUFFREMsUUFBTTtBQUZMLENBYlksQ0FBakIiLCJmaWxlIjoiaGdhbWUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IFtcbiAge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvODM4MDI5ZjJmYWQ0MTFhZWY2MjgyODNkYjdlMTJkNmJfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+aUvumAkOa4uOaIjydcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvYTc5MDBmMWY4NjQ4NjBiZjFlMzQwMzAxMTM0NGViZGVfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+S4m+ael+azleWImSdcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvZjYwYzc0OWM2NWRmZmI5MWRlM2I1NWVjZWZkOTc5NjNfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+aIkeeahOS4lueVjCdcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvOTNmNjdjNTVmOTFkM2IzNjI4NmZkZjY1ODVlMzRiMmNfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+ecn+S6uuaxvei9pumpvumptidcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvODJiZmI0MDMyZGYzNzY2NDI1ZDU1ODRiY2U0NGQxY2ZfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+S/oeS7u+eahOi/m+WMlidcbiAgfVxuXVxuIl19

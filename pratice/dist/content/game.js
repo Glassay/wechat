@@ -1,0 +1,22 @@
+'use strict';
+
+module.exports = [{
+  pic: 'https://img.taptapdada.com/market/icons/a0c10a8bbd72d87793fb6d250e8a2667_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '月面战争'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/cb380b47a1d4cd6ac2f52bdd47387c89_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '勇敢的手'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/5a63e162046b8654a1b35e6a687e7310_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '小狐狸的冒险'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/8c53527ce9a7736827da27a88745f959_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '黑色星期五'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/787b3cff5926442850f7cb91ba6a9569_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '果冻快跑'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/563e191c525cfbedae052de36eddbcd8_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '行尸:死亡之城'
+}];
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImdhbWUuanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsInBpYyIsIm5hbWUiXSwibWFwcGluZ3MiOiI7O0FBQUFBLE9BQU9DLE9BQVAsR0FBaUIsQ0FDZjtBQUNFQyxPQUFLLHFJQURQO0FBRUVDLFFBQU07QUFGUixDQURlLEVBSVo7QUFDREQsT0FBSyxtSUFESjtBQUVEQyxRQUFNO0FBRkwsQ0FKWSxFQU9aO0FBQ0RELE9BQUssbUlBREo7QUFFREMsUUFBTTtBQUZMLENBUFksRUFVWjtBQUNERCxPQUFLLG1JQURKO0FBRURDLFFBQU07QUFGTCxDQVZZLEVBYVo7QUFDREQsT0FBSyxtSUFESjtBQUVEQyxRQUFNO0FBRkwsQ0FiWSxFQWdCWjtBQUNERCxPQUFLLG1JQURKO0FBRURDLFFBQU07QUFGTCxDQWhCWSxDQUFqQiIsImZpbGUiOiJnYW1lLmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBbXG4gIHtcbiAgICBwaWM6ICdodHRwczovL2ltZy50YXB0YXBkYWRhLmNvbS9tYXJrZXQvaWNvbnMvYTBjMTBhOGJiZDcyZDg3NzkzZmI2ZDI1MGU4YTI2NjdfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+aciOmdouaImOS6iSdcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvY2IzODBiNDdhMWQ0Y2Q2YWMyZjUyYmRkNDczODdjODlfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+WLh+aVoueahOaJiydcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvNWE2M2UxNjIwNDZiODY1NGExYjM1ZTZhNjg3ZTczMTBfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+Wwj+eLkOeLuOeahOWGkumZqSdcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvOGM1MzUyN2NlOWE3NzM2ODI3ZGEyN2E4ODc0NWY5NTlfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+m7keiJsuaYn+acn+S6lCdcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvNzg3YjNjZmY1OTI2NDQyODUwZjdjYjkxYmE2YTk1NjlfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+aenOWGu+W/q+i3kSdcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvNTYzZTE5MWM1MjVjZmJlZGFlMDUyZGUzNmVkZGJjZDhfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+ihjOWwuDrmrbvkuqHkuYvln44nXG4gIH1cbl1cbiJdfQ==

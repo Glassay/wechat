@@ -5,25 +5,72 @@
 }
 .sort {
   display: flex;
-  /* align-items: center;
-  color: #FFFFFF;
-  font-size: 20px;
-  margin-right: 10px; */
 }
 .single_sort {
-  height: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  height: 1.3rem;
   width: 4rem;
   background-color: #00DDDD;
   border: 1px solid #FFFFFF;
-  border-radius: 2rem;
+  border-radius: 1rem;
+  margin: 0.5rem 1rem 0.5rem 0rem; 
+}
+.line {
+  background-color: #AAAAAA;
+  height: 0.5px;
+  width: 100%;
+}
+.single_title {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 0.4rem;
+}
+.type {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.single_game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+.image {
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 0.8rem;
+  box-shadow: 2px 2px 3px #AAAAAA;
+}
+.game_name {
+  font-size: 10px;
+  font-weight: bold;
+}
+.channel_view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.single_channel {
+  width: 10rem;
+  height: 4.5rem;
+  border-radius: 1rem;
+  margin: 0.6rem;
+  box-shadow: 2px 2px 3px #AAAAAA;
 }
 </style>
 
 <template>
   <view>
     <view>
-      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
-        <block wx:for="{{imagUrls}}" wx:for-index="index">
+      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true">
+        <block wx:for="{{imagUrls}}" wx:key="index">
           <swiper-item>
             <image class="swiper" src="{{item}}" mode="widthFix"/>
           </swiper-item>
@@ -31,28 +78,77 @@
       </swiper>
     </view>
     <scroll-view scroll-x="true">
-      <view class="sort">
-        <view wx:for="{{[1, 2, 3, 4, 5, 6, 7]}}" wx:key="index">
-          <view class="single_sort">新游预约</view>
+      <view class="sort" bindscroll="scroll">
+        <view wx:for="{{label}}" wx:key="index">
+          <view class="single_sort"><text>{{item.title}}</text></view>
         </view>
-        <!-- <view class="single_sort">角色扮演</view>
-        <view class="single_sort">动作</view>
-        <view class="single_sort">策略</view>
-        <view class="single_sort">模拟</view>
-        <view class="single_sort">益智</view>
-        <view class="single_sort">新游预约</view>
-        <view class="single_sort">角色扮演</view>
-        <view class="single_sort">动作</view>
-        <view class="single_sort">策略</view>
-        <view class="single_sort">模拟</view>
-        <view class="single_sort">益智</view> -->
       </view>
     </scroll-view>
+    <view class="line"></view>
+    <view>
+      <view class="single_title">每日新发现</view>
+      <scroll-view scroll-x="true">
+        <view class="type">
+          <view wx:for="{{dgame}}" wx:key="index">
+            <view class="single_game">
+              <image class="image" src="{{item.pic}}"></image>
+              <view class="game_name">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="line"></view>
+    <view>
+      <scroll-view scroll-x="true">
+      <view class="channel_view">
+        <view wx:for="{{channel}}" wx:key="index">
+          <view>
+            <image class="single_channel" src="{{item.pic}}"></image>
+          </view>
+        </view>
+      </view>
+      </scroll-view>
+    </view>
+    <view class="line"></view>
+    <view class="line"></view>
+    <view>
+      <view class="single_title">新游预约</view>
+      <scroll-view scroll-x="true">
+        <view class="type">
+          <view wx:for="{{ngame}}" wx:key="index">
+            <view class="single_game">
+              <image class="image" src="{{item.pic}}"></image>
+              <view class="game_name">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="line"></view>
+    <view class="line"></view>
+    <view>
+      <view class="single_title">近期最热</view>
+      <scroll-view scroll-x="true">
+        <view class="type">
+          <view wx:for="{{hgame}}" wx:key="index">
+            <view class="single_game">
+              <image class="image" src="{{item.pic}}"></image>
+              <view class="game_name">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
   </view>
-  
 </template>
 
 <script>
+  import hgame from '../content/hgame.js'
+  import ngame from '../content/ngame.js'
+  import channel from '../content/channel.js'
+  import dgame from '../content/dgame.js'
+  import label from '../content/label.js'
   import wepy from 'wepy'
   export default class Home extends wepy.page {
     config = {
@@ -63,7 +159,21 @@
         'https://img.taptapdada.com/market/images/50e5a352065c8d43fd3db555261c05a4.jpg?imageView2/1/w/2080/h/800/q/40/format/jpg/interlace/1/ignore-error/1',
         'https://img.taptapdada.com/market/images/9b997ef9e2aa1d45cb1c7f07f7cdaddf.jpg?imageView2/1/w/2080/h/800/q/40/format/jpg/interlace/1/ignore-error/1',
         'https://img.taptapdada.com/market/images/b60a912359ed214afbb310da7e2926e3.jpg?imageView2/1/w/2080/h/800/q/40/format/jpg/interlace/1/ignore-error/1'
-      ]
+      ],
+      label: null,
+      dgame: null,
+      channel: null,
+      ngame: null,
+      hgame: null
+    }
+    onLoad() {
+      let self = this
+      self.hgame = hgame
+      self.ngame = ngame
+      self.channel = channel
+      self.label = label
+      self.dgame = dgame
+      console.log(self.label)
     }
   }
 </script>

@@ -1,0 +1,28 @@
+'use strict';
+
+module.exports = [{
+  title: '新游预约'
+}, {
+  title: '角色扮演'
+}, {
+  title: '动作'
+}, {
+  title: '策略'
+}, {
+  title: '模拟'
+}, {
+  title: '益智'
+}, {
+  title: '街机'
+}, {
+  title: '冒险'
+}, {
+  title: '新游预约'
+}, {
+  title: '卡牌'
+}, {
+  title: '体育'
+}, {
+  title: '竞速'
+}];
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNvcnQuanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsInRpdGxlIl0sIm1hcHBpbmdzIjoiOztBQUFBQSxPQUFPQyxPQUFQLEdBQWlCLENBQ2Y7QUFDRUMsU0FBTztBQURULENBRGUsRUFHWjtBQUNEQSxTQUFPO0FBRE4sQ0FIWSxFQUtaO0FBQ0RBLFNBQU87QUFETixDQUxZLEVBT1o7QUFDREEsU0FBTztBQUROLENBUFksRUFTWjtBQUNEQSxTQUFPO0FBRE4sQ0FUWSxFQVdaO0FBQ0RBLFNBQU87QUFETixDQVhZLEVBYVo7QUFDREEsU0FBTztBQUROLENBYlksRUFlWjtBQUNEQSxTQUFPO0FBRE4sQ0FmWSxFQWlCWjtBQUNEQSxTQUFPO0FBRE4sQ0FqQlksRUFtQlo7QUFDREEsU0FBTztBQUROLENBbkJZLEVBcUJaO0FBQ0RBLFNBQU87QUFETixDQXJCWSxFQXVCWjtBQUNEQSxTQUFPO0FBRE4sQ0F2QlksQ0FBakIiLCJmaWxlIjoic29ydC5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gW1xuICB7XG4gICAgdGl0bGU6ICfmlrDmuLjpooTnuqYnXG4gIH0sIHtcbiAgICB0aXRsZTogJ+inkuiJsuaJrua8lCdcbiAgfSwge1xuICAgIHRpdGxlOiAn5Yqo5L2cJ1xuICB9LCB7XG4gICAgdGl0bGU6ICfnrZbnlaUnXG4gIH0sIHtcbiAgICB0aXRsZTogJ+aooeaLnydcbiAgfSwge1xuICAgIHRpdGxlOiAn55uK5pm6J1xuICB9LCB7XG4gICAgdGl0bGU6ICfooZfmnLonXG4gIH0sIHtcbiAgICB0aXRsZTogJ+WGkumZqSdcbiAgfSwge1xuICAgIHRpdGxlOiAn5paw5ri46aKE57qmJ1xuICB9LCB7XG4gICAgdGl0bGU6ICfljaHniYwnXG4gIH0sIHtcbiAgICB0aXRsZTogJ+S9k+iCsidcbiAgfSwge1xuICAgIHRpdGxlOiAn56ue6YCfJ1xuICB9XG5dXG4iXX0=
