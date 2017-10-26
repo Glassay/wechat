@@ -18,7 +18,10 @@
     </scroll-view>
     <view class="line"/>
     <view>
-      <view class="single_title">每日新发现</view>
+      <view class="title_view">
+        <view class="single_title">每日新发现</view>
+        <view class="more">更多</view>
+      </view>
       <scroll-view scroll-x="true">
         <view class="type">
           <view wx:for="{{dgame}}" wx:key="index">
@@ -30,6 +33,7 @@
         </view>
       </scroll-view>
     </view>
+    <view class="line"/>
     <view class="line"/>
     <view>
       <scroll-view scroll-x="true">
@@ -45,7 +49,10 @@
     <view class="line"/>
     <view class="line"/>
     <view>
-      <view class="single_title">新游预约</view>
+      <view class="title_view">
+        <view class="single_title">新游预约</view>
+        <view class="more">更多</view>
+      </view>
       <scroll-view scroll-x="true">
         <view class="type">
           <view wx:for="{{ngame}}" wx:key="index">
@@ -60,7 +67,10 @@
     <view class="line"/>
     <view class="line"/>
     <view>
-      <view class="single_title">近期最热</view>
+      <view class="title_view">
+        <view class="single_title">近期最热</view>
+        <view class="more">更多</view>
+      </view>
       <scroll-view scroll-x="true">
         <view class="type">
           <view wx:for="{{hgame}}" wx:key="index">

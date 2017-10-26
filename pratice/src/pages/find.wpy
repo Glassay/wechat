@@ -24,12 +24,23 @@
   height: 0.5px;
   width: 100%;
 }
+.title_view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.4rem;
+}
 .single_title {
   display: flex;
   flex-direction: row;
   font-size: 15px;
   font-weight: bold;
-  margin-top: 0.4rem;
+  /* margin-top: 0.4rem; */
+}
+.more {
+  font-size: 0.6rem;
+  color: #00DDDD;
 }
 .type {
   display: flex;
@@ -86,7 +97,10 @@
     </scroll-view>
     <view class="line"></view>
     <view>
-      <view class="single_title">每日新发现</view>
+      <view class="title_view">
+        <view class="single_title">每日新发现</view>
+        <view class="more">更多</view>
+      </view>
       <scroll-view scroll-x="true">
         <view class="type">
           <view wx:for="{{dgame}}" wx:key="index">
@@ -98,6 +112,7 @@
         </view>
       </scroll-view>
     </view>
+    <view class="line"></view>
     <view class="line"></view>
     <view>
       <scroll-view scroll-x="true">
@@ -113,7 +128,10 @@
     <view class="line"></view>
     <view class="line"></view>
     <view>
-      <view class="single_title">新游预约</view>
+      <view class="title_view">
+        <view class="single_title">新游预约</view>
+        <view class="more">更多</view>
+      </view>
       <scroll-view scroll-x="true">
         <view class="type">
           <view wx:for="{{ngame}}" wx:key="index">
@@ -128,7 +146,10 @@
     <view class="line"></view>
     <view class="line"></view>
     <view>
-      <view class="single_title">近期最热</view>
+      <view class="title_view">
+        <view class="single_title">近期最热</view>
+        <view class="more">更多</view>
+      </view>
       <scroll-view scroll-x="true">
         <view class="type">
           <view wx:for="{{hgame}}" wx:key="index">

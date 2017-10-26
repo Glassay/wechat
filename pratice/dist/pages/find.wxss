@@ -24,12 +24,23 @@
   height: 0.5px;
   width: 100%;
 }
+.title_view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.4rem;
+}
 .single_title {
   display: flex;
   flex-direction: row;
   font-size: 15px;
   font-weight: bold;
-  margin-top: 0.4rem;
+  /* margin-top: 0.4rem; */
+}
+.more {
+  font-size: 0.6rem;
+  color: #00DDDD;
 }
 .type {
   display: flex;
