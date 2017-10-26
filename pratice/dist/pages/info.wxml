@@ -59,7 +59,7 @@
         <view class="single_biaoqian" style="margin-left: 6rem"><image style="width: 10px; height: 10px" src="{{shizi}}"/></view>
       </view>
       <view style="background-color: #DDDDDD; margin-top: 10px">
-        <scroll-view scroll-x="true" bindscrolltolower="upper">
+        <scroll-view scroll-x="true">
           <view class="pic" bindscroll="scroll">
             <view><image class="pic_size" style="margin: 0.4rem" src="https://img.taptapdada.com/market/images/d6ff9bdfd23b147b9dc5152add2d8210.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
             <view><image class="pic_size" style="margin: 0.4rem" mode="aspectFill" src="https://img.taptapdada.com/market/images/d238b0a666f764a917f61f616a007fab.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1"/></view>
