@@ -59,14 +59,6 @@
     }
     methods = {
       click() {
-        // wepy.showLoading({
-        //   title: '加载中',
-        //   image: '../image/shizi.png'
-        //   // duration: 1500
-        // })
-        // setTimeout(function() {
-        //   wepy.hideLoading()
-        // }, 1500)
         wepy.navigateTo({
           url: './info'
         })
