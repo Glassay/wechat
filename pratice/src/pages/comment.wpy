@@ -1,0 +1,17 @@
+<style>
+
+</style>
+
+<template>
+  <view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Home extends wepy.page {
+    config = {
+      navigationBarTitleText: '评价'
+    }
+  }
+</script>

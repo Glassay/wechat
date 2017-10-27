@@ -50,8 +50,9 @@
 }
 .guan_xia {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
+  margin-right: 1.5rem;
 }
 .xiangqing {
   display: flex;
@@ -178,9 +179,7 @@
       </view>
     </view>
     <view class="guan_xia">
-      <image style="width: 20px; height: 20px; margin: 8px 0px 0px 13rem" src="{{like}}"></image>
-      <text class="guanzhu">关注</text>
-      <text class="xiazai">下载</text>
+      <text class="guanzhu" @tap="attention">关注</text>
     </view>
     <view class="line"></view>
     <view>
@@ -337,7 +336,17 @@
         } else {
           self.shouqi2 = '显示全部'
         }
+      },
+      attention() {
+        wepy.showToast({
+          title: '已关注',
+          image: '../image/like.png',
+          duration: 1500,
+          mask: true
+        })
       }
+    }
+    onLoad() {
     }
   }
 </script>

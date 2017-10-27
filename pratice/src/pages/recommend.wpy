@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0px 0px 15px;
+  margin: 10px 10px 0px 15px;
 }
 .title {
   font-size: 13px;
@@ -23,42 +23,76 @@
 
 <template>
   <view>
-    <view>
-        <view class="from">
-          <view>
-            <image style="width: 20px; height: 20px" src="https://img.taptapdada.com/market/lcs/84dd395551187a7bcf89af93cc1f1d67_360.png?imageMogr2/auto-orient/strip"></image>
-            <text style="font-size: 13px; color: #DDDDDD">来自编辑的推荐</text>
+    <view wx:for="{{home}}" wx:key="index">
+      <view>
+          <view class="from">
+            <view>
+              <image style="width: 20px; height: 20px" src="{{item.litile_image}}"></image>
+              <text style="font-size: 13px; color: #DDDDDD">{{item.game_from}}</text>
+            </view>
+            <view>
+              <image style="width: 20px; height: 20px" src="{{point}}" @tap="choose_point"></image>
+            </view>
           </view>
-          <view>
-            <image style="width: 20px; height: 20px" src="{{point}}"></image>
+          <view class="title">{{item.game_title}}</view>
+          <view @tap="click">
+            <image class="pic" src="{{item.game_image}}" mode="widthFix heightFix"></image>
+            <view class="title" style="font-size: 13px">{{item.describe}}</view>
           </view>
-        </view>
-        <view class="title">魔性建筑工</view>
-        <view @tap="click">
-          <image class="pic" src="https://img.taptapdada.com/market/images/88e56419cb46382f5dbee4330dcbc497.png?imageView2/2/h/560/q/40/format/jpg/interlace/1/ignore-error/1" mode="widthFix heightFix"></image>
-          <view class="title" style="font-size: 13px">你手速很快？...不存在的！最后一关能上十分算我输.</view>
-        </view>
-        <view class="last"></view>
+          <view class="last"></view>
+      </view>
     </view>
   </view>
   
 </template>
 
 <script>
+  import home from '../content/home.js'
   import wepy from 'wepy'
   export default class Home extends wepy.page {
     config = {
       navigationBarTitleText: 'TapTap'
     }
     data = {
-      point: '../image/point.png'
+      point: '../image/point.png',
+      home: null
     }
     methods = {
       click() {
+        // wepy.showLoading({
+        //   title: '加载中',
+        //   image: '../image/shizi.png'
+        //   // duration: 1500
+        // })
+        // setTimeout(function() {
+        //   wepy.hideLoading()
+        // }, 1500)
         wepy.navigateTo({
           url: './info'
         })
+      },
+      choose_point() {
+        wepy.showModal({
+          title: '不感兴趣？',
+          content: '再往下看看吧',
+          success: function(res) {
+            if (res.confirm) {
+              console.log('确定')
+            } else if (res.cancel) {
+              console.log('取消')
+            }
+          }
+        })
       }
+    }
+    onLoad() {
+      let self = this
+      self.home = home
+      wepy.showLoading({
+        title: 'taptap',
+        duration: 2000,
+        image: '../image/loading1.gif'
+      })
     }
   }
 </script>

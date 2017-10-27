@@ -50,8 +50,9 @@
 }
 .guan_xia {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
+  margin-right: 1.5rem;
 }
 .xiangqing {
   display: flex;
