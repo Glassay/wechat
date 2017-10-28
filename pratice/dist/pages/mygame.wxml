@@ -1,3 +1,15 @@
 
   <view>
+    <view class="info">
+      <image class="head" src="{{avatarUrl}}"/>
+      <text>{{nickName}}</text>
+      <view class="line"/>
+      <view class="line"/>
+    </view>
+    <view>我的收藏</view>
+    <view class="line"/>
+    <view class="line"/>
+    <view>我的关注</view>
+    <view class="line"/>
+    <view class="line"/>
   </view>

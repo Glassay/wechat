@@ -20,7 +20,8 @@ export default class extends wepy.app {
       'pages/info',
       'pages/index',
       'pages/find',
-      'pages/classfy'
+      'pages/classfy',
+      'pages/mygame'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -35,8 +36,8 @@ export default class extends wepy.app {
       list: [{
         pagePath: 'pages/recommend',
         text: '推荐',
-        iconPath: './image/captain1.png',
-        selectedIconPath: './image/captain2.png'
+        iconPath: './image/star1.png',
+        selectedIconPath: './image/star2.png'
       }, {
         pagePath: 'pages/find',
         text: '发现',
@@ -45,8 +46,8 @@ export default class extends wepy.app {
       }, {
         pagePath: 'pages/mygame',
         text: '我的游戏',
-        iconPath: './image/mygame1.png',
-        selectedIconPath: './image/mygame2.png'
+        iconPath: './image/game1.png',
+        selectedIconPath: './image/game2.png'
       }]
     }
   }

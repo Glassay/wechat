@@ -340,7 +340,7 @@
       attention() {
         wepy.showToast({
           title: '已关注',
-          image: '../image/like.png',
+          image: '../image/right.png',
           duration: 1500,
           mask: true
         })
