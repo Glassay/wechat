@@ -20,7 +20,7 @@ export default class extends wepy.app {
       'pages/info',
       'pages/index',
       'pages/find',
-      'pages/mygame'
+      'pages/classfy'
     ],
     window: {
       backgroundTextStyle: 'light',

@@ -1,0 +1,44 @@
+'use strict';
+
+module.exports = [{
+  pic: 'https://img.taptapdada.com/market/lcs/bce3debcd352810c3fbeb9959b7450a6_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '商业大亨',
+  describe: '模拟',
+  score: '9.2'
+}, {
+  pic: 'https://img.taptapdada.com/market/icons/8cbbdedcfdbf56fa63c64ea9a7ef75f1_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '舰队指挥官',
+  describe: '模拟',
+  score: '8.0'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/8fd2c56458eaa13eadf701448dbf9819_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: 'Dodge Hard',
+  describe: '动作',
+  score: '9.0'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/4083498ac74ae7e697d6a884e8e021ac_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '我的绿洲',
+  describe: '模拟',
+  score: '8.3'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/28b60a422a1a75f167794bbe0a46072c_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '精英小队-突围',
+  describe: '大逃杀',
+  score: '9.6'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/e3a2398f505ea47bce87bb3f6c460086_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: 'UnjnownWorld',
+  describe: '吃鸡',
+  score: '8.6'
+}, {
+  pic: 'https://img.taptapdada.com/market/lcs/482c582965cf5ff55b7154fd03f15d8b_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '墟土之争',
+  describe: '角色扮演',
+  score: '7.0'
+}, {
+  pic: 'https://img.taptapdada.com/market/icons/9909f576365784a692b9538fc25a7f75_360.png?imageView2/1/w/256/q/40/interlace/1/ignore-error/1',
+  name: '上吧MT',
+  describe: 'RPG',
+  score: '4.6'
+}];
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNsYXNzZnkuanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsInBpYyIsIm5hbWUiLCJkZXNjcmliZSIsInNjb3JlIl0sIm1hcHBpbmdzIjoiOztBQUFBQSxPQUFPQyxPQUFQLEdBQWlCLENBQ2Y7QUFDRUMsT0FBSyxtSUFEUDtBQUVFQyxRQUFNLE1BRlI7QUFHRUMsWUFBVSxJQUhaO0FBSUVDLFNBQU87QUFKVCxDQURlLEVBTVo7QUFDREgsT0FBSyxxSUFESjtBQUVEQyxRQUFNLE9BRkw7QUFHREMsWUFBVSxJQUhUO0FBSURDLFNBQU87QUFKTixDQU5ZLEVBV1o7QUFDREgsT0FBSyxtSUFESjtBQUVEQyxRQUFNLFlBRkw7QUFHREMsWUFBVSxJQUhUO0FBSURDLFNBQU87QUFKTixDQVhZLEVBZ0JaO0FBQ0RILE9BQUssbUlBREo7QUFFREMsUUFBTSxNQUZMO0FBR0RDLFlBQVUsSUFIVDtBQUlEQyxTQUFPO0FBSk4sQ0FoQlksRUFxQlo7QUFDREgsT0FBSyxtSUFESjtBQUVEQyxRQUFNLFNBRkw7QUFHREMsWUFBVSxLQUhUO0FBSURDLFNBQU87QUFKTixDQXJCWSxFQTBCWjtBQUNESCxPQUFLLG1JQURKO0FBRURDLFFBQU0sY0FGTDtBQUdEQyxZQUFVLElBSFQ7QUFJREMsU0FBTztBQUpOLENBMUJZLEVBK0JaO0FBQ0RILE9BQUssbUlBREo7QUFFREMsUUFBTSxNQUZMO0FBR0RDLFlBQVUsTUFIVDtBQUlEQyxTQUFPO0FBSk4sQ0EvQlksRUFvQ1o7QUFDREgsT0FBSyxxSUFESjtBQUVEQyxRQUFNLE1BRkw7QUFHREMsWUFBVSxLQUhUO0FBSURDLFNBQU87QUFKTixDQXBDWSxDQUFqQiIsImZpbGUiOiJjbGFzc2Z5LmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSBbXG4gIHtcbiAgICBwaWM6ICdodHRwczovL2ltZy50YXB0YXBkYWRhLmNvbS9tYXJrZXQvbGNzL2JjZTNkZWJjZDM1MjgxMGMzZmJlYjk5NTliNzQ1MGE2XzM2MC5wbmc/aW1hZ2VWaWV3Mi8xL3cvMjU2L3EvNDAvaW50ZXJsYWNlLzEvaWdub3JlLWVycm9yLzEnLFxuICAgIG5hbWU6ICfllYbkuJrlpKfkuqgnLFxuICAgIGRlc2NyaWJlOiAn5qih5oufJyxcbiAgICBzY29yZTogJzkuMidcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9pY29ucy84Y2JiZGVkY2ZkYmY1NmZhNjNjNjRlYTlhN2VmNzVmMV8zNjAucG5nP2ltYWdlVmlldzIvMS93LzI1Ni9xLzQwL2ludGVybGFjZS8xL2lnbm9yZS1lcnJvci8xJyxcbiAgICBuYW1lOiAn6Iiw6Zif5oyH5oyl5a6YJyxcbiAgICBkZXNjcmliZTogJ+aooeaLnycsXG4gICAgc2NvcmU6ICc4LjAnXG4gIH0sIHtcbiAgICBwaWM6ICdodHRwczovL2ltZy50YXB0YXBkYWRhLmNvbS9tYXJrZXQvbGNzLzhmZDJjNTY0NThlYWExM2VhZGY3MDE0NDhkYmY5ODE5XzM2MC5wbmc/aW1hZ2VWaWV3Mi8xL3cvMjU2L3EvNDAvaW50ZXJsYWNlLzEvaWdub3JlLWVycm9yLzEnLFxuICAgIG5hbWU6ICdEb2RnZSBIYXJkJyxcbiAgICBkZXNjcmliZTogJ+WKqOS9nCcsXG4gICAgc2NvcmU6ICc5LjAnXG4gIH0sIHtcbiAgICBwaWM6ICdodHRwczovL2ltZy50YXB0YXBkYWRhLmNvbS9tYXJrZXQvbGNzLzQwODM0OThhYzc0YWU3ZTY5N2Q2YTg4NGU4ZTAyMWFjXzM2MC5wbmc/aW1hZ2VWaWV3Mi8xL3cvMjU2L3EvNDAvaW50ZXJsYWNlLzEvaWdub3JlLWVycm9yLzEnLFxuICAgIG5hbWU6ICfmiJHnmoTnu7/mtLInLFxuICAgIGRlc2NyaWJlOiAn5qih5oufJyxcbiAgICBzY29yZTogJzguMydcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvMjhiNjBhNDIyYTFhNzVmMTY3Nzk0YmJlMGE0NjA3MmNfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+eyvuiLseWwj+mYny3nqoHlm7QnLFxuICAgIGRlc2NyaWJlOiAn5aSn6YCD5p2AJyxcbiAgICBzY29yZTogJzkuNidcbiAgfSwge1xuICAgIHBpYzogJ2h0dHBzOi8vaW1nLnRhcHRhcGRhZGEuY29tL21hcmtldC9sY3MvZTNhMjM5OGY1MDVlYTQ3YmNlODdiYjNmNmM0NjAwODZfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ1Vuam5vd25Xb3JsZCcsXG4gICAgZGVzY3JpYmU6ICflkIPpuKEnLFxuICAgIHNjb3JlOiAnOC42J1xuICB9LCB7XG4gICAgcGljOiAnaHR0cHM6Ly9pbWcudGFwdGFwZGFkYS5jb20vbWFya2V0L2xjcy80ODJjNTgyOTY1Y2Y1ZmY1NWI3MTU0ZmQwM2YxNWQ4Yl8zNjAucG5nP2ltYWdlVmlldzIvMS93LzI1Ni9xLzQwL2ludGVybGFjZS8xL2lnbm9yZS1lcnJvci8xJyxcbiAgICBuYW1lOiAn5aKf5Zyf5LmL5LqJJyxcbiAgICBkZXNjcmliZTogJ+inkuiJsuaJrua8lCcsXG4gICAgc2NvcmU6ICc3LjAnXG4gIH0sIHtcbiAgICBwaWM6ICdodHRwczovL2ltZy50YXB0YXBkYWRhLmNvbS9tYXJrZXQvaWNvbnMvOTkwOWY1NzYzNjU3ODRhNjkyYjk1MzhmYzI1YTdmNzVfMzYwLnBuZz9pbWFnZVZpZXcyLzEvdy8yNTYvcS80MC9pbnRlcmxhY2UvMS9pZ25vcmUtZXJyb3IvMScsXG4gICAgbmFtZTogJ+S4iuWQp01UJyxcbiAgICBkZXNjcmliZTogJ1JQRycsXG4gICAgc2NvcmU6ICc0LjYnXG4gIH1cbl1cbiJdfQ==

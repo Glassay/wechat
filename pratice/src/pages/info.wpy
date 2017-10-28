@@ -24,7 +24,7 @@
   border-radius: 50%;
   background-color: #00DDDD;
   margin-left: 5rem;
-  box-shadow: 4px 5px 5px #00AAAA;
+  box-shadow: 0px 0px 10px #0088A8;
 }
 .line {
   background-color: #AAAAAA;
@@ -347,6 +347,11 @@
       }
     }
     onLoad() {
+      wepy.showLoading({
+        title: 'taptap',
+        duration: 2000,
+        image: '../image/loading1.gif'
+      })
     }
   }
 </script>

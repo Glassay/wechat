@@ -15,9 +15,10 @@
   height: 1.3rem;
   width: 4rem;
   background-color: #00DDDD;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #00DDDD;
   border-radius: 1rem;
   margin: 0.5rem 1rem 0.5rem 0rem; 
+  box-shadow: 3px 3px 1px #AAAAAA;
 }
 .line {
   background-color: #AAAAAA;

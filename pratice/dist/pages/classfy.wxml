@@ -1,0 +1,23 @@
+
+  <view>
+    <view  wx:for="{{classfy}}" wx:key="index">
+      <view class="view">
+        <view class="game_view">
+          <image class="pic" src="{{item.pic}}"/>
+          <view class="describe">
+            <view class="game_name">{{item.name}}</view>
+            <view class="game_describe">{{item.describe}}</view>
+          </view>
+        </view>
+        <view class="grade_view">
+          <view class="grade">
+            <text style="font-size: 8px; color: white; margin-top: 4px">TapTap</text>
+            <text style="color: white; font-size: 25px;">{{item.score}}</text>
+          </view>
+          <view bindtap="yuyue" class="order">预约</view>
+        </view>
+      </view>
+      <view class="line"/>
+      <view class="line"/>
+    </view>
+  </view>

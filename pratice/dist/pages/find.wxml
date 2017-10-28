@@ -12,7 +12,7 @@
     <scroll-view scroll-x="true">
       <view class="sort" bindscroll="scroll">
         <view  wx:for="{{label}}" wx:key="index">
-          <view class="single_sort"><text>{{item.title}}</text></view>
+          <view bindtap="click" class="single_sort"><text>{{item.title}}</text></view>
         </view>
       </view>
     </scroll-view>

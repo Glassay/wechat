@@ -16,7 +16,7 @@ module.exports = [
   }, {
     title: '冒险'
   }, {
-    title: '新游预约'
+    title: '近期最热'
   }, {
     title: '卡牌'
   }, {

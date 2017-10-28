@@ -15,9 +15,10 @@
   height: 1.3rem;
   width: 4rem;
   background-color: #00DDDD;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #00DDDD;
   border-radius: 1rem;
   margin: 0.5rem 1rem 0.5rem 0rem; 
+  box-shadow: 3px 3px 1px #AAAAAA;
 }
 .line {
   background-color: #AAAAAA;
@@ -91,7 +92,7 @@
     <scroll-view scroll-x="true">
       <view class="sort" bindscroll="scroll">
         <view wx:for="{{label}}" wx:key="index">
-          <view class="single_sort"><text>{{item.title}}</text></view>
+          <view @tap="click" class="single_sort"><text>{{item.title}}</text></view>
         </view>
       </view>
     </scroll-view>
@@ -177,9 +178,9 @@
     }
     data = {
       imagUrls: [
-        'https://img.taptapdada.com/market/images/50e5a352065c8d43fd3db555261c05a4.jpg?imageView2/1/w/2080/h/800/q/40/format/jpg/interlace/1/ignore-error/1',
+        'https://img.taptapdada.com/market/images/e25f7e6cfc9b77fc2343c5be46db6cb5.jpg?imageView2/1/w/2080/h/800/q/40/format/jpg/interlace/1/ignore-error/1',
         'https://img.taptapdada.com/market/images/9b997ef9e2aa1d45cb1c7f07f7cdaddf.jpg?imageView2/1/w/2080/h/800/q/40/format/jpg/interlace/1/ignore-error/1',
-        'https://img.taptapdada.com/market/images/b60a912359ed214afbb310da7e2926e3.jpg?imageView2/1/w/2080/h/800/q/40/format/jpg/interlace/1/ignore-error/1'
+        'https://img.taptapdada.com/market/images/f63d08709e1013862bf395f071fccd04.jpg?imageView2/1/w/2080/h/800/q/40/format/jpg/interlace/1/ignore-error/1'
       ],
       label: null,
       dgame: null,
@@ -194,6 +195,18 @@
       self.channel = channel
       self.label = label
       self.dgame = dgame
+      wepy.showLoading({
+        title: 'taptap',
+        duration: 2000,
+        image: '../image/loading1.gif'
+      })
+    }
+    methods = {
+      click() {
+        wepy.navigateTo({
+          url: './classfy'
+        })
+      }
     }
   }
 </script>

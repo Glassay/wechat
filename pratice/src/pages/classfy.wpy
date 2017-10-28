@@ -1,0 +1,131 @@
+<style>
+.line {
+  background-color: #AAAAAA;
+  height: 0.5px;
+  width: 100%;
+}
+.pic {
+  width: 4rem;
+  height: 4rem;
+  box-shadow: 1px 1px 2px #FFFFFF;
+}
+.game_name {
+  font-size: 18px;
+}
+.describe {
+  position: relative;
+  margin-left: 1rem;
+}
+.game_describe {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 12px;
+  color: #00DDDD;
+  border: 1px solid #00DDDD;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  width: 2rem;
+  height: 1rem;
+  position: absolute;
+  bottom: 0.5rem;
+}
+.game_view {
+  display: flex;
+  flex-direction: row;
+}
+.view {
+  display: flex;
+  flex-direction: row;
+  margin: 0.7rem;
+  justify-content: space-between;
+}
+.grade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #00DDDD;
+  /* margin-left: 5rem; */
+  box-shadow: 0px 0px 10px #0088A8;
+}
+.grade_view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10px; */
+}
+.order {
+  border: 1px solid #00DDDD;
+  border-radius: 5px;
+  width: 100%;
+  height: 1rem;
+  color: #FFFFFF;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #00DDDD;
+  margin-top: 10px;
+  box-shadow: 0px 0px 2px #00AAAA;
+}
+</style>
+
+<template>
+  <view>
+    <view wx:for="{{classfy}}" wx:key="index">
+      <view class="view">
+        <view class="game_view">
+          <image class="pic" src="{{item.pic}}"></image>
+          <view class="describe">
+            <view class="game_name">{{item.name}}</view>
+            <view class="game_describe">{{item.describe}}</view>
+          </view>
+        </view>
+        <view class="grade_view">
+          <view class="grade">
+            <text style="font-size: 8px; color: white; margin-top: 4px">TapTap</text>
+            <text style="color: white; font-size: 25px;">{{item.score}}</text>
+          </view>
+          <view @tap="yuyue" class="order">预约</view>
+        </view>
+      </view>
+      <view class="line"></view>
+      <view class="line"></view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import classfy from '../content/classfy.js'
+  import wepy from 'wepy'
+  export default class Home extends wepy.page {
+    config = {
+    }
+    data = {
+      classfy: null
+    }
+    methods = {
+      yuyue() {
+        wepy.showToast({
+          title: '已预约',
+          image: '../image/right.png',
+          duration: 1500,
+          mask: true
+        })
+      }
+    }
+    onLoad() {
+      let self = this
+      self.classfy = classfy
+      wepy.showLoading({
+        title: 'taptap',
+        duration: 2000,
+        image: '../image/loading1.gif'
+      })
+    }
+  }
+</script>
