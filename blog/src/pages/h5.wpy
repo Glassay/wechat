@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import h5 from '../content/h5.js'
+  import h5 from '../content/h5.js'
   import wepy from 'wepy'
   export default class H5 extends wepy.page {
     config = {
