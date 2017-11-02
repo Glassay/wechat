@@ -12,6 +12,7 @@ module.exports = app => {
       this.ctx.body = yield this.service.article.update(this.ctx.request.body);
     }
     * select() {
+      console.log(this.ctx.request.body);
       this.ctx.body = yield this.service.article.select(this.ctx.request.body);
     }
   }

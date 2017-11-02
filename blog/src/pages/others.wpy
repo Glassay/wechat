@@ -36,11 +36,12 @@
 <template>
   <view>
     <view class="content">
-      <view class="small_content" wx:for="{{text}}" wx:key="index" data-index="{{index}}">
+      <view class="small_content" wx:for="{{a}}" wx:key="index">
         <view>{{item.title}}</view>
-        <view class="line"></view>
-        <!-- <view class="line"></view> -->
         <view>{{item.profile}}</view>
+        <view>{{item.article}}</view>
+        <view class="line"></view>
+        <view class="line"></view>
         <view class="label">
           <view>{{item.type}}</view>
           <view>{{item.column_line}}</view>
@@ -54,35 +55,31 @@
   import wepy from 'wepy'
   export default class Js extends wepy.page {
     config = {
-      navigationBarTitleText: 'JavaScript'
+      navigationBarTitleText: '文章'
     }
     data = {
-      text: ''
+      js: [],
+      a: ''
     }
     methods = {
     }
-    onLoad(e) {
+    onLoad() {
       let self = this
-      self.type = e.type
-      console.log(e.type, 'hhhhhh')
-      wepy.request({
-        url: 'http://127.0.0.1:7001/select1',
-        method: 'post',
-        data: {
-          type: self.type
-        },
-        success: function(res) {
-          self.text = res.data
-          self.setData({
-            text: res.data
-          })
-          console.log(self.text)
-        }
-      })
       wepy.getSystemInfo({
         success(res) {
           self.height = res.windowHeight
           self.width = res.windowWidth
+        }
+      })
+      wepy.request({
+        url: 'http://127.0.0.1:7001/select1',
+        method: 'POST',
+        success: function (res) {
+          self.a = res.data
+          console.log(res, 'aaaaaaaaaaaaa')
+          self.setData({
+            a: res.data
+          })
         }
       })
     }

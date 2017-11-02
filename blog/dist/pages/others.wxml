@@ -1,11 +1,12 @@
 
   <view>
     <view class="content">
-      <view class="small_content"  wx:for="{{text}}" wx:key="index" data-index="{{index}}">
+      <view class="small_content"  wx:for="{{a}}" wx:key="index">
         <view>{{item.title}}</view>
-        <view class="line"/>
-        <!-- <view class="line"></view> -->
         <view>{{item.profile}}</view>
+        <view>{{item.article}}</view>
+        <view class="line"/>
+        <view class="line"/>
         <view class="label">
           <view>{{item.type}}</view>
           <view>{{item.column_line}}</view>

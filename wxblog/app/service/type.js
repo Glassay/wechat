@@ -32,7 +32,7 @@ module.exports = app => {
     * select(req) {
       let res;
       try {
-        res = yield app.mysql.get('type', req);
+        res = yield app.mysql.select('type', req);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;

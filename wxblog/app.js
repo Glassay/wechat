@@ -12,6 +12,7 @@ module.exports = app => {
       const typeSchema = knex.schema.createTableIfNotExists('type', function(table) {
         table.increments();
         table.string('type').notNullable().defaultTo('');
+        table.string('image').notNullable().defaultTo('');
         table.timestamp('create_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });

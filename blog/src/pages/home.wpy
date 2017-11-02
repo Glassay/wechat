@@ -14,7 +14,6 @@
   justify-content: center;
   align-items: center;
   background-color: #CCEEFF;
-  /* margin-top: 10px; */
 }
 .image {
   border: 1px solid #BBFFEE;
@@ -26,34 +25,14 @@
 
 <template>
   <view class="view">
-    <view class="type" @tap="js">
-      <view>
-        <image class="image" src="https://www.javascript.com/images/meta/facebook.png"></image>
-      </view>
-      <view class="time">
-        <view style="font-size: 20px">JavaScript</view>
-      </view>
-    </view>
-    <view class="type" @tap="node">
-      <view><image class="image" src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/nodejs-frameworks.png"></image></view>
-      <view class="time">
-        <view style="font-size: 20px">Node</view>
-      </view>
-    </view>
-    <view class="type" @tap="h5">
-      <view>
-        <image class="image" src="https://www.sololearn.com/Uploads/html-css.jpg"></image>
-      </view>
-      <view class="time">
-        <view style="font-size: 20px">H5</view>
-      </view>
-    </view>
-    <view class="type" @tap="mysql">
-      <view>
-        <image class="image" src="https://farm4.staticflickr.com/3913/14522157584_a67ab2e898_o_d.png"></image>
-      </view>
-      <view class="time">
-        <view style="font-size: 20px">MySQL</view>
+    <view @tap="js" wx:for="{{a}}" wx:key="index" data-index="{{index}}">
+      <view class="type">
+        <view>
+          <image class="image" src="{{item.image}}"></image>
+        </view>
+        <view class="time">
+          <view style="font-size: 20px">{{item.type}}</view>
+        </view>
       </view>
     </view>
   </view>
@@ -65,26 +44,16 @@ export default class Home extends wepy.page {
   config = {
   }
   data = {
+    a: ''
   }
   methods = {
-    js() {
+    js(e) {
+      let self = this
+      let id = e.currentTarget.dataset.index
+      let type = self.a[id].type
+      console.log(e, 'dddddddd')
       wepy.navigateTo({
-        url: './js'
-      })
-    },
-    node() {
-      wepy.navigateTo({
-        url: './node'
-      })
-    },
-    h5() {
-      wepy.navigateTo({
-        url: './h5'
-      })
-    },
-    mysql() {
-      wepy.navigateTo({
-        url: './mysql'
+        url: `./js?type=${type}`
       })
     }
   }
@@ -106,6 +75,18 @@ export default class Home extends wepy.page {
       title: '加载中',
       duration: 2000,
       image: '../image/loading.gif'
+    })
+    wepy.request({
+      url: 'http://127.0.0.1:7001/select',
+      method: 'POST',
+      success: function (res) {
+        self.a = res.data
+        console.log(res)
+        console.log(self.a)
+        self.setData({
+          a: res.data
+        })
+      }
     })
   }
 }

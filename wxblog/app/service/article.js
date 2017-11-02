@@ -1,4 +1,7 @@
 'use strict';
+const knex = require('knex')({
+  client: 'mysql',
+});
 
 module.exports = app => {
   class Article extends app.Service {
@@ -29,10 +32,12 @@ module.exports = app => {
       }
       return true;
     }
-    * select(req) {
+    * select(a) {
       let res;
       try {
-        res = yield app.mysql.get('article', req);
+        res = yield app.mysql.select('article', {
+          where: { type: a.type },
+        });
       } catch (e) {
         this.ctx.logger.error(e);
         return false;

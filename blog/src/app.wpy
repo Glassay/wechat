@@ -23,7 +23,8 @@ export default class extends wepy.app {
       'pages/h5',
       'pages/mysql',
       'pages/all',
-      'pages/personal'
+      'pages/personal',
+      'pages/others'
     ],
     window: {
       backgroundTextStyle: 'light',

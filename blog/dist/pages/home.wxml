@@ -1,33 +1,13 @@
 
   <view class="view">
-    <view class="type" bindtap="js">
-      <view>
-        <image class="image" src="https://www.javascript.com/images/meta/facebook.png"/>
-      </view>
-      <view class="time">
-        <view style="font-size: 20px">JavaScript</view>
-      </view>
-    </view>
-    <view class="type" bindtap="node">
-      <view><image class="image" src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/nodejs-frameworks.png"/></view>
-      <view class="time">
-        <view style="font-size: 20px">Node</view>
-      </view>
-    </view>
-    <view class="type" bindtap="h5">
-      <view>
-        <image class="image" src="https://www.sololearn.com/Uploads/html-css.jpg"/>
-      </view>
-      <view class="time">
-        <view style="font-size: 20px">H5</view>
-      </view>
-    </view>
-    <view class="type" bindtap="mysql">
-      <view>
-        <image class="image" src="https://farm4.staticflickr.com/3913/14522157584_a67ab2e898_o_d.png"/>
-      </view>
-      <view class="time">
-        <view style="font-size: 20px">MySQL</view>
+    <view bindtap="js"  wx:for="{{a}}" wx:key="index" data-index="{{index}}">
+      <view class="type">
+        <view>
+          <image class="image" src="{{item.image}}"/>
+        </view>
+        <view class="time">
+          <view style="font-size: 20px">{{item.type}}</view>
+        </view>
       </view>
     </view>
   </view>
