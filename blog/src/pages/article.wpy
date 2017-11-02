@@ -36,7 +36,7 @@
 <template>
   <view>
     <view class="content">
-      <view @tap="article" class="small_content" wx:for="{{h5}}" wx:key="index">
+      <view class="small_content" wx:for="{{js}}" wx:key="index">
         <view>{{item.title}}</view>
         <view class="line"></view>
         <view class="line"></view>
@@ -44,46 +44,31 @@
           <view>{{item.type}}</view>
           <view>{{item.column_line}}</view>
           <view>{{item.data}}</view>
-          <view>{{count}}</view>
         </view>
       </view>
     </view>
   </view>
 </template>
-
 <script>
-  import h5 from '../content/h5.js'
+  import js from '../content/js.js'
   import wepy from 'wepy'
-  export default class H5 extends wepy.page {
+  export default class Js extends wepy.page {
     config = {
-      navigationBarTitleText: 'H5'
+      navigationBarTitleText: 'Article'
     }
     data = {
-      h5: [],
-      count: 0
+      js: []
     }
     methods = {
-      article() {
-        let self = this
-        wepy.navigateTo({
-          url: './article'
-        })
-        self.count++
-      }
     }
     onLoad() {
       let self = this
-      self.h5 = h5
+      self.js = js
       wepy.getSystemInfo({
         success(res) {
           self.height = res.windowHeight
           self.width = res.windowWidth
         }
-      })
-      wepy.showLoading({
-        title: '加载中',
-        duration: 2000,
-        image: '../image/loading.gif'
       })
     }
   }

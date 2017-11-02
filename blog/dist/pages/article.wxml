@@ -1,7 +1,7 @@
 
   <view>
     <view class="content">
-      <view bindtap="article" class="small_content"  wx:for="{{h5}}" wx:key="index">
+      <view class="small_content"  wx:for="{{js}}" wx:key="index">
         <view>{{item.title}}</view>
         <view class="line"/>
         <view class="line"/>
@@ -9,7 +9,6 @@
           <view>{{item.type}}</view>
           <view>{{item.column_line}}</view>
           <view>{{item.data}}</view>
-          <view>{{count}}</view>
         </view>
       </view>
     </view>

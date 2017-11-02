@@ -18,6 +18,7 @@ export default class extends wepy.app {
     pages: [
       'pages/home',
       'pages/js',
+      'pages/article',
       'pages/node',
       'pages/h5',
       'pages/mysql',
