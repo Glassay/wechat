@@ -1,0 +1,21 @@
+
+  <view>
+    <view class="content">
+      <view class="small_content" style="width: {{width}}px; height: {{height}}px">
+        <view class="title">{{single_article.title}}</view>
+        <view class="line"/>
+        <view class="label">
+          <view class="single_label">
+            <view style="margin: 5rpx">{{single_article.type}}</view>
+            <view>|</view>
+            <view style="margin: 5rpx">{{single_article.date}}</view>
+          </view>
+          <view class="single_label">
+            <image src="../image/eyes.png" style="width: 25rpx; height: 25rpx"/>
+            <view style="margin: 5rpx">{{single_article.count}}</view>
+          </view>
+        </view>
+        <view class="article">{{single_article.article}}</view>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,47 @@
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: #CCEEFF;
+}
+.small_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 10rem;
+  margin: 0.5rem 0.8rem 0.2rem 0.8rem;
+  box-shadow: 2px 2px 3px #888888;
+  position: relative;
+}
+.line {
+  background-color: #000000;
+  height: 0.5px;
+  width: 90%;
+}
+.label {
+  position: absolute;
+  bottom: 10rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 22rpx;
+}
+.single_label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 1rem;
+}
+.profile {
+  font-size: 24rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  margin: 20rpx;
+}
+  

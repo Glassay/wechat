@@ -1,0 +1,36 @@
+<style>
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+</style>
+
+<template>
+  <view style="background-color: #CCEEFF">
+    <view class="head">
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  export default class Hot extends wepy.page {
+    config = {
+      navigationBarTitleText: '最多人看'
+    }
+    data = {
+    }
+    methods = {
+    }
+    onLoad() {
+      let self = this
+      wepy.getSystemInfo({
+        success(res) {
+          self.height = res.windowHeight
+          self.width = res.windowWidth
+        }
+      })
+    }
+  }
+</script>

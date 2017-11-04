@@ -1,6 +1,0 @@
-
-  <view class="layout back_image" style="opacity: 1">
-    <view>
-      <text class="article" style="opacty: 0.5">收藏</text>
-    </view>
-  </view>

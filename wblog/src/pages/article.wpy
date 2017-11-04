@@ -1,0 +1,125 @@
+<style>
+.content {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background-color: #CCEEFF;
+}
+.small_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  /* height: 10rem;
+  margin: 0.5rem 0.8rem 0.2rem 0.8rem; */
+  box-shadow: 2px 2px 3px #888888;
+  position: relative;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 20rpx; */
+  align-items: center;
+  font-size: 28rpx;
+}
+.line {
+  background-color: #000;
+  height: 0.5px;
+  width: 90%;
+}
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+.single_label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 1rem;
+}
+.profile {
+  font-size: 15px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  margin: 20rpx;
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+}
+  
+</style>
+
+<template>
+  <view>
+    <view class="content">
+      <view class="small_content" style="width: {{width}}px; height: {{height}}px">
+        <view class="title">{{single_article.title}}</view>
+        <view class="line"></view>
+        <view class="label">
+          <view class="single_label">
+            <view style="margin: 5rpx">{{single_article.type}}</view>
+            <view>|</view>
+            <view style="margin: 5rpx">{{single_article.date}}</view>
+          </view>
+          <view class="single_label">
+            <image src="../image/eyes.png" style="width: 25rpx; height: 25rpx"></image>
+            <view style="margin: 5rpx">{{single_article.count}}</view>
+          </view>
+        </view>
+        <view class="article">{{single_article.article}}</view>
+      </view>
+    </view>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+  export default class Js extends wepy.page {
+    config = {
+      navigationBarTitleText: 'JavaScript'
+    }
+    data = {
+      single_article: '',
+      index: '',
+      type: '',
+      height: 0,
+      width: 0
+    }
+    methods = {
+    }
+    onLoad(e) {
+      let self = this
+      self.type = e.type
+      self.index = e.index
+      console.log(e.type, 'hhhhhh')
+      wepy.request({
+        url: 'http://127.0.0.1:7001/select1',
+        method: 'post',
+        data: {
+          type: self.type
+        },
+        success: function(res) {
+          self.single_article = res.data[self.index]
+          self.setData({
+            single_article: res.data[self.index]
+          })
+          console.log(res.data)
+          console.log(self.single_article, 'aaaaaaaaaaaaaaa')
+        }
+      })
+      wepy.getSystemInfo({
+        success(res) {
+          self.height = res.windowHeight
+          self.width = res.windowWidth
+        }
+      })
+    }
+  }
+</script>

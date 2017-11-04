@@ -9,6 +9,7 @@ module.exports = app => {
       this.ctx.body = yield this.service.article.delete(this.ctx.request.body);
     }
     * update() {
+      console.log(this.ctx.request.body, 'ssss');
       this.ctx.body = yield this.service.article.update(this.ctx.request.body);
     }
     * select() {

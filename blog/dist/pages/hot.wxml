@@ -1,9 +1,0 @@
-
-  <view style="background-color: #CCEEFF">
-    <view class="head">
-      <view>JavaScript</view>
-      <view>H5</view>
-      <view>MySQL</view>
-      <view>Node</view>
-    </view>
-  </view>

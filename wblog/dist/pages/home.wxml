@@ -1,0 +1,13 @@
+
+  <view class="view" style="width: {{width}}px; height: {{height}}px">
+    <view bindtap="enter"  wx:for="{{article_type}}" wx:key="index" id="{{index}}">
+      <view class="type">
+        <view>
+          <image class="image" src="{{item.image}}"/>
+        </view>
+        <view class="time">
+          <view style="font-size: 28rpx">{{item.type}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
