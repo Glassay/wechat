@@ -25,11 +25,12 @@
 .line {
   background-color: #000;
   height: 0.5px;
-  width: 90%;
+  width: 95%;
 }
 .label {
   display: flex;
   flex-direction: row;
+  width: 100%;
   justify-content: space-between;
   font-size: 24rpx;
 }
@@ -53,6 +54,7 @@
   display: flex;
   flex-direction: column;
   font-size: 24rpx;
+  margin: 20rpx;
 }
   
 </style>
@@ -61,20 +63,20 @@
   <view>
     <view class="content">
       <view class="small_content" style="width: {{width}}px; height: {{height}}px">
-        <view class="title">{{single_article.title}}</view>
+        <view class="title">{{article.title}}</view>
         <view class="line"></view>
         <view class="label">
           <view class="single_label">
-            <view style="margin: 5rpx">{{single_article.type}}</view>
+            <view style="margin: 5rpx">{{article.type}}</view>
             <view>|</view>
-            <view style="margin: 5rpx">{{single_article.date}}</view>
+            <view style="margin: 5rpx">{{article.date}}</view>
           </view>
           <view class="single_label">
             <image src="../image/eyes.png" style="width: 25rpx; height: 25rpx"></image>
-            <view style="margin: 5rpx">{{single_article.count}}</view>
+            <view style="margin: 5rpx">{{article.count}}</view>
           </view>
         </view>
-        <view class="article">{{single_article.article}}</view>
+        <view class="article">{{article.article}}</view>
       </view>
     </view>
   </view>
@@ -86,34 +88,20 @@
       navigationBarTitleText: '我的文章'
     }
     data = {
-      single_article: '',
-      index: '',
-      type: '',
       height: 0,
-      width: 0
+      width: 0,
+      article: ''
     }
     methods = {
     }
-    onLoad(e) {
+    onLoad() {
       let self = this
-      self.type = e.type
-      self.index = e.index
-      console.log(e.type, 'hhhhhh')
-      wepy.request({
-        url: 'http://127.0.0.1:7001/select1',
-        method: 'post',
-        data: {
-          type: self.type
-        },
-        success: function(res) {
-          self.single_article = res.data[self.index]
-          self.setData({
-            single_article: res.data[self.index]
-          })
-          console.log(res.data)
-          console.log(self.single_article, 'aaaaaaaaaaaaaaa')
-        }
-      })
+      try {
+        let article = wepy.getStorageSync('article')
+        self.article = article
+      } catch (err) {
+        console.log(err)
+      }
       wepy.getSystemInfo({
         success(res) {
           self.height = res.windowHeight

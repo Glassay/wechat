@@ -1,5 +1,21 @@
 
-  <view style="background-color: #CCEEFF">
-    <view class="head">
+  <view>
+    <view class="content" style="width: {{width}}px; height: {{height}}px">
+      <view bindtap="enter" class="small_content"  wx:for="{{article}}" wx:key="index" id="{{index}}">
+        <view style="font-size: 28rpx">{{item.title}}</view>
+        <view class="line"/>
+        <view class="profile">{{item.profile}}</view>
+        <view class="label">
+          <view class="single_label">
+            <view style="margin: 4rpx">{{item.type}}</view>
+            <view>|</view>
+            <view style="margin: 4rpx">{{item.date}}</view>
+          </view>
+          <view class="single_label">
+            <image src="../image/eyes.png" style="width: 25rpx; height: 25rpx"/>
+            <view style="margin: 4rpx">{{item.count}}</view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>

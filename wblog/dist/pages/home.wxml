@@ -5,7 +5,7 @@
         <view>
           <image class="image" src="{{item.image}}"/>
         </view>
-        <view class="time">
+        <view class="title">
           <view style="font-size: 28rpx">{{item.type}}</view>
         </view>
       </view>

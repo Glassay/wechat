@@ -1,30 +1,114 @@
 <style>
-.head {
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: #CCEEFF;
+}
+.small_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 10rem;
+  margin: 0.5rem 0.8rem 0.2rem 0.8rem;
+  box-shadow: 2px 2px 3px #888888;
+  position: relative;
+}
+.line {
+  background-color: #000000;
+  height: 0.5px;
+  width: 90%;
+}
+.label {
+  position: absolute;
+  bottom: 10rpx;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 22rpx;
 }
+.single_label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 1rem;
+}
+.profile {
+  font-size: 24rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  margin: 20rpx;
+}
+  
 </style>
-
 <template>
-  <view style="background-color: #CCEEFF">
-    <view class="head">
+  <view>
+    <view class="content" style="width: {{width}}px; height: {{height}}px">
+      <view @tap="enter" class="small_content" wx:for="{{article}}" wx:key="index" id="{{index}}">
+        <view style="font-size: 28rpx">{{item.title}}</view>
+        <view class="line"></view>
+        <view class="profile">{{item.profile}}</view>
+        <view class="label">
+          <view class="single_label">
+            <view style="margin: 4rpx">{{item.type}}</view>
+            <view>|</view>
+            <view style="margin: 4rpx">{{item.date}}</view>
+          </view>
+          <view class="single_label">
+            <image src="../image/eyes.png" style="width: 25rpx; height: 25rpx"></image>
+            <view style="margin: 4rpx">{{item.count}}</view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 </template>
-
 <script>
   import wepy from 'wepy'
-  export default class Hot extends wepy.page {
+  export default class Js extends wepy.page {
     config = {
       navigationBarTitleText: '最多人看'
     }
     data = {
+      article: '',
+      width: 0,
+      height: 0
     }
     methods = {
+      enter(e) {
+        let self = this
+        let id = e.currentTarget.id
+        let article = self.article[id]
+        // console.log(e, 'dddddddd')
+        try {
+          wepy.setStorageSync('article', article)
+        } catch (err) {
+          console.log(err)
+          return
+        }
+        wepy.navigateTo({
+          url: './hotarticle'
+        })
+      }
     }
     onLoad() {
       let self = this
+      wepy.request({
+        url: 'http://127.0.0.1:7001/hot',
+        method: 'POST',
+        success: function (res) {
+          self.article = res.data
+          console.log(self.article, '全部文章')
+          self.setData({
+            article: res.data
+          })
+        }
+      })
       wepy.getSystemInfo({
         success(res) {
           self.height = res.windowHeight

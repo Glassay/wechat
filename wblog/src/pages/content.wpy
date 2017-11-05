@@ -72,7 +72,7 @@
   import wepy from 'wepy'
   export default class Js extends wepy.page {
     config = {
-      navigationBarTitleText: 'JavaScript'
+      navigationBarTitleText: '文章区'
     }
     data = {
       single_type: '',

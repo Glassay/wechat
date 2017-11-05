@@ -2,6 +2,7 @@
 .content {
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
   background-color: #CCEEFF;
 }
 .small_content {
@@ -9,24 +10,29 @@
   flex-direction: column;
   align-items: center;
   background-color: #FFFFFF;
-  height: 10rem;
-  margin: 0.5rem 0.8rem 0.2rem 0.8rem;
+  /* height: 10rem;
+  margin: 0.5rem 0.8rem 0.2rem 0.8rem; */
   box-shadow: 2px 2px 3px #888888;
   position: relative;
 }
+.title {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 20rpx; */
+  align-items: center;
+  font-size: 28rpx;
+}
 .line {
-  background-color: #000000;
+  background-color: #000;
   height: 0.5px;
-  width: 90%;
+  width: 95%;
 }
 .label {
-  position: absolute;
-  bottom: 10rpx;
-  width: 100%;
   display: flex;
   flex-direction: row;
+  width: 100%;
   justify-content: space-between;
-  font-size: 22rpx;
+  font-size: 24rpx;
 }
 .single_label {
   display: flex;
@@ -35,13 +41,19 @@
   margin: 0px 1rem;
 }
 .profile {
-  font-size: 24rpx;
+  font-size: 15px;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-all;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
+  margin: 20rpx;
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
   margin: 20rpx;
 }
   

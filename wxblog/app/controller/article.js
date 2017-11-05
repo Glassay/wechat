@@ -16,6 +16,9 @@ module.exports = app => {
       console.log(this.ctx.request.body);
       this.ctx.body = yield this.service.article.select(this.ctx.request.body);
     }
+    * hot() {
+      this.ctx.body = yield this.service.article.hot(this.ctx.request.body);
+    }
   }
   return StartController;
 };

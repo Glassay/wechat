@@ -2,11 +2,12 @@
 .view {
   background-color: #CCEEFF;
 }
-.time {
+.title {
   display: flex;
   flex-direction: row;
   font-size: 10px;
   color: #000000;
+  margin-bottom: 20rpx;
 }
 .type {
   display: flex;
@@ -18,6 +19,6 @@
 .image {
   border: 1px solid #BBFFEE;
   border-radius: 0.8rem;
-  margin-top: 30px;
+  margin-top: 30rpx;
   box-shadow: 2px 2px 3px #888888;
 }

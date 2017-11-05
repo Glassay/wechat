@@ -26,6 +26,21 @@ module.exports = app => {
       }
       return res;
     }
+    * hot() {
+      let res;
+      try {
+        res = yield app.mysql.select('article', {
+          // where: { count: article_type.count },
+          orders: [[ 'count', 'desc' ], [ 'id', 'desc' ]],
+          limit: 10,
+          offset: 0,
+        });
+      } catch (e) {
+        this.ctx.logger.error(e);
+        return false;
+      }
+      return res;
+    }
   }
   return Article;
 };
