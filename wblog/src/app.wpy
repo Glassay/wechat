@@ -41,7 +41,7 @@ export default class extends wepy.app {
         selectedIconPath: './image/home1.png'
       }, {
         pagePath: 'pages/hot',
-        text: '最多人看',
+        text: '查看最多',
         iconPath: './image/like.png',
         selectedIconPath: './image/like1.png'
       }, {
